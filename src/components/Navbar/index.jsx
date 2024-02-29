@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './index.css'
 
-function Navbar() {
+function JournalNavbar() {
     return (
         <Navbar expand="lg" className="customNav">
             <Container>
@@ -22,4 +22,4 @@ function Navbar() {
     );
 }
 
-export default Navbar
+export default JournalNavbar
