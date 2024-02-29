@@ -1,7 +1,6 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import JournalEntryForm from '../JournalEntry';
-
+import EmojiBar from '../EmotionBar';
 
 function Journal() {
     const handleEntrySubmit = (entryData) => {
@@ -12,6 +11,7 @@ function Journal() {
     return (
         <div>
             <h2>Journal Entry</h2>
+            <EmojiBar /> 
             <JournalEntryForm onSubmit={handleEntrySubmit} />
         </div>
     );
