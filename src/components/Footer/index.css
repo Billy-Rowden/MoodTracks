@@ -2,9 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.footerButton {
+    background-color: #fffeef;
+    border: 1px solid black;
 }

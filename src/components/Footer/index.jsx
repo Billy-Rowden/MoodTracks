@@ -5,12 +5,9 @@ import './index.css'
 function JournalFooter() {
     return (
         <Card className="customFooter">
-            <Card.Header>Footer Header</Card.Header>
             <Card.Body>
-                <Card.Text>
-                    Footer text?
-                </Card.Text>
-                <Button variant="primary">Button to skip to top of page?</Button>
+                <Card.Text> ©  MoodTracks, 2024</Card.Text>
+                <Button className="footerButton" variant="primary">Top</Button>
             </Card.Body>
         </Card>
     );
