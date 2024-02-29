@@ -1,16 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './index.css'
 
 function JournalFooter() {
     return (
-        <Card>
-            <Card.Header>Featured</Card.Header>
+        <Card className="customFooter">
+            <Card.Header>Footer Header</Card.Header>
             <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
                 <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    Footer text?
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">Button to skip to top of page?</Button>
             </Card.Body>
         </Card>
     );
