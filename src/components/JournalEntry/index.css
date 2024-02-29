@@ -2,13 +2,14 @@
     position: relative;
 }
 
-.dateInput, .journalEntry {
+.dateInput,
+.journalEntry {
     width: 100%;
     margin: 0.5em;
-    background-color: #fffeef; /* Set background color to white */
-    color: #000; /* Set text color to black */
-    border: 1px solid #ccc; /* Add border */
-    padding: 0.5em; /* Add padding */
+    background-color: #fffeef !important;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 0.5em;
 }
 
 .DayPicker {
@@ -16,40 +17,4 @@
     width: 100%;
     background-color: #fffeef !important;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.DayPicker-Months {
-    display: flex;
-    justify-content: center;
-}
-
-.DayPicker-Month {
-    margin: 0;
-}
-
-.DayPicker-Caption {
-    margin-bottom: 0.5em;
-}
-
-.DayPicker-Body {
-    padding: 0;
-}
-
-.DayPicker-Day {
-    padding: 0.5em;
-}
-
-.DayPicker-Day--selected:not(.DayPicker-Day--outside) {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.DayPicker-Day--today {
-    color: #007bff;
-    font-weight: bold;
-}
-
-div {
-    padding-top: 0.5em;
 }

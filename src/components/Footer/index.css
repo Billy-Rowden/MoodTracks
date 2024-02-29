@@ -6,9 +6,17 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    margin: 0.5em;
 }
 
 .footerButton {
     background-color: #fffeef;
     border: 1px solid black;
+    margin-left: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
