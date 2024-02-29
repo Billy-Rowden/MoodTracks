@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import JournalNavbar from './components/Navbar'
 import JournalFooter from './components/Footer'
-import { Login, Contact } from './components/Pages'
+import { Login, Contact, Journal } from './components/Pages'
 import './App.css'
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <JournalNavbar />
       <Routes>
         <Route path='*' element={< Login />} />
+        <Route path='/journal' element={< Journal />} />
         <Route path='/contact' element={< Contact />} />
       </Routes>
       <JournalFooter />
@@ -20,3 +21,5 @@ function App() {
 }
 
 export default App
+
+// ToDo: Make Navbar and footer hidden on login page
