@@ -1,9 +1,19 @@
-// imports from bootstrap here
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './index.css'
 
-function Footer() {
+function JournalFooter() {
     return (
-        // Navbar content here
-    )
+        <Card className="customFooter">
+            <Card.Header>Footer Header</Card.Header>
+            <Card.Body>
+                <Card.Text>
+                    Footer text?
+                </Card.Text>
+                <Button variant="primary">Button to skip to top of page?</Button>
+            </Card.Body>
+        </Card>
+    );
 }
 
-export default Footer
+export default JournalFooter;
