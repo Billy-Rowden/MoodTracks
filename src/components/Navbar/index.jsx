@@ -14,6 +14,7 @@ function JournalNavbar() {
                     <Nav className="ml-auto">
                         <Nav.Link className="navLink" href="/login">login</Nav.Link>
                         <Nav.Link className="navLink" href="/contact">contact</Nav.Link>
+                        <Nav.Link className="navLink" href="/socials">socials</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
