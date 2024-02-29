@@ -9,12 +9,11 @@ function App() {
 
   return (
     <Router>
-      {/* navbar? or perhaps this is where the emotions are kept */}
+      <Navbar />
       <Routes>
         {/* <Route Homepage where user prompts journal entry for that day? /> */}
         {/* <Route main page where the mood, playlist and journal entry is /> */}
         {/* <Route calendar for past journal entries? /> */}
-        {/* <Route resources /> */}
         {/* <Route meet the developers? contact section? /> */}
       </Routes>
       {/* footer? */}
