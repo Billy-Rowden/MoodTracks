@@ -1,5 +1,5 @@
 .journalForm {
-    position: relative;
+    position: fixed;
 }
 
 .dateInput,
@@ -12,9 +12,18 @@
     padding: 0.5em;
 }
 
-.DayPicker {
-    position: absolute;
-    width: 100%;
-    background-color: #fffeef !important;
+.rdp-month {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: fffeef;
     border: 1px solid #ccc;
+}
+
+.rdp-month button {
+    background-color: #fffeef;
+}
+
+.submitButton {
+    background-color: transparent;
 }
