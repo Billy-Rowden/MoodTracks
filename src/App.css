@@ -1,9 +1,9 @@
 #root {
   max-width: 100vw;
   min-height: 100vh;
-  margin: 0 auto;
   background-color: #fffeef;
   text-align: center;
+  overflow: hidden;
 }
 
 nav {

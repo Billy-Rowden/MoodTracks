@@ -6,11 +6,11 @@ import './index.css'
 function EmojiBar() {
     return (
         <Card className="emojiContainer">
-            <Card.Body>
-                <p> Good <br></br><FontAwesomeIcon icon={faSmile} /> </p>
-                <p> Neutral <br></br><FontAwesomeIcon icon={faMehBlank} /></p>
-                <p>Low <br></br><FontAwesomeIcon icon={faSadTear} /></p>
-                <p>Frustrated <br></br><FontAwesomeIcon icon={faAngry} /></p>
+            <Card.Body className="emojis">
+                <div className="mood"> Good <br></br><FontAwesomeIcon icon={faSmile} /> </div>
+                <div className="mood"> Neutral <br></br><FontAwesomeIcon icon={faMehBlank} /></div>
+                <div className="mood">Low <br></br><FontAwesomeIcon icon={faSadTear} /></div>
+                <div className="mood">Frustrated <br></br><FontAwesomeIcon icon={faAngry} /></div>
             </Card.Body>
         </Card>
     )
