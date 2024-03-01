@@ -2,3 +2,14 @@
     color: black;
     text-align: center;
 }
+
+.journal-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar,
+.emoji-bar,
+.journal-entry-form {
+    margin-bottom: 22em;
+}
