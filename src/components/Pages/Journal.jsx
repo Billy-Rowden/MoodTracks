@@ -1,15 +1,13 @@
 import React from 'react';
 import JournalEntryForm from '../JournalEntry';
-import EmojiBar from '../EmotionBar';
-import Player from '../SpotifyPlayer'
-import './index.css'; // Import the CSS file
+import SpotifyPlayer from '../SpotifyPlayer';
+import './index.css'; 
 
 function Journal() {
     return (
         <div className="journal-container">
             <h2>Journal</h2>
-            <EmojiBar className="emoji-bar" />
-            <Player />
+            <SpotifyPlayer />
             <JournalEntryForm className="journal-entry-form" />
         </div>
     );

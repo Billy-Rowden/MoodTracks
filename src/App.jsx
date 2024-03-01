@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import JournalNavbar from './components/Navbar'
 import JournalFooter from './components/Footer'
-import EmojiBar from './components/EmotionBar'
 import { Login, Contact, Journal, Socials } from './components/Pages'
 import './App.css'
 
