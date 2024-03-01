@@ -3,7 +3,7 @@
     border: none;
 }
 
-.Calendar {
-    width: 100%;
+.calendar {
+    position: static !important;
 }
 

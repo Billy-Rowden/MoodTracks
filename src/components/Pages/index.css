@@ -3,13 +3,32 @@
     text-align: center;
 }
 
-.journal-container {
-    display: flex;
-    flex-direction: column;
+Form {
+    margin: 2em;
 }
 
-.calendar,
-.emoji-bar,
-.journal-entry-form {
-    margin-bottom: 22em;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
 }
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-control {
+    background-color: transparent;
+}
+
+.loginButton {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.calendar-container {
+    position: relative !important;
+}
+
