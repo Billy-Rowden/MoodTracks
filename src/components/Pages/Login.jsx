@@ -35,7 +35,7 @@ function Login() {
             <div className="login-form">
                 <Form onSubmit={handleSubmit}>
                     <div className="input-group">
-                        <Form.Label>First Name:</Form.Label>
+                        <Form.Label>first name</Form.Label>
                         <Form.Control
                             type="text"
                             value={firstName}
@@ -45,7 +45,7 @@ function Login() {
                     </div>
 
                     <div className="input-group">
-                        <Form.Label>Password:</Form.Label>
+                        <Form.Label>password</Form.Label>
                         <Form.Control
                             type="password"
                             value={password}
@@ -55,7 +55,7 @@ function Login() {
                     </div>
 
                     <Button variant="primary" type="submit" className="loginButton">
-                        Login
+                        login
                     </Button>
                 </Form>
             </div>
@@ -66,5 +66,10 @@ function Login() {
         </Container>
     );
 }
+
+// ToDO: render a button beneath the calendar to take the user to their journal page
+// hide the navbar on login page
+//calendar is fixed right now, needs to be amended so that it will scroll with the user
+
 
 export default Login;

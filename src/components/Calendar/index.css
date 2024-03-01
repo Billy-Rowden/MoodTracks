@@ -1,9 +1,4 @@
 .rdp-day_selected  {
     background: black !important;
-    border: none;
-}
-
-.calendar {
-    position: static !important;
-}
-
+    border: black
+} 
