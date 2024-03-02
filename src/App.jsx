@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import JournalNavbar from './components/Navbar'
 import JournalFooter from './components/Footer'
 import { Login, Contact, Journal, Socials } from './components/Pages'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {

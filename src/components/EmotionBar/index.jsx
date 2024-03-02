@@ -2,12 +2,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
-import './EmojiBar.css';
+import './index.css';
 
 const EmojiBar = ({ onEmotionSelect }) => {
     return (
         <div className="feelingContainer">
-            <h5> !! affirmations go above this!! </h5>
             <h5> how are you feeling today? </h5>
             <div className="emojiContainer">
                 <div className="emojis" onClick={() => onEmotionSelect('good')}>

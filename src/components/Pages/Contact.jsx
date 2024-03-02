@@ -5,6 +5,8 @@ function Contact() {
     return (
         <Container>
             <p>contact page</p>
+            <p>All dev profiles</p>
+            <p>fake submit form</p>
         </Container>
     );
 }
