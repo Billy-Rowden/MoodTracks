@@ -14,7 +14,7 @@ Form {
 }
 
 .login-container {
-    margin-top: 8vh;
+    margin-top: 7vh;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -25,12 +25,10 @@ Form {
     color: var(--blue-grey);
 }
 
-.loginButton {
-    background-color: transparent !important;
-    border: 1px solid black !important;
-    color: black !important;
-}
 
+.loginButton:hover{
+background-color: var(--dark-blue) !important;
+}
 .mainLogo {
     margin-top: 5vh;
     max-width: 100%;

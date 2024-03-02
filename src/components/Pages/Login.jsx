@@ -63,8 +63,9 @@ function Login() {
                                 style={{ width: '20em', height: '2.5em', borderRadius: '5px'}}
                             />
                         </div>
-                        <Button variant="primary" type="submit" className="loginButton">
-                            login
+                        <Button variant="" type="submit" className="loginButton"
+                        style={{ width: '10em', height: '2.5em', borderRadius: '5px', backgroundColor: '#48566c', color:'#e3e9ff' }}>
+                            Login
                         </Button>
                     </Form>
                 </div>
