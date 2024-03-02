@@ -1,23 +1,30 @@
-import Card from 'react-bootstrap/Card';
+// EmojiBar.jsx
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSmile, faSadTear, faAngry, faMehBlank} from '@fortawesome/free-regular-svg-icons';
-import './index.css'
+import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
+import './EmojiBar.css';
 
-function EmojiBar() {
+const EmojiBar = ({ onEmotionSelect }) => {
     return (
         <div className="feelingContainer">
             <h5> !! affirmations go above this!! </h5>
             <h5> how are you feeling today? </h5>
-        <Card className="emojiContainer">
-            <Card.Body className="emojis">
-                <div className="mood"> Good <br></br><FontAwesomeIcon icon={faSmile} /> </div>
-                <div className="mood"> Neutral <br></br><FontAwesomeIcon icon={faMehBlank} /></div>
-                <div className="mood">Low <br></br><FontAwesomeIcon icon={faSadTear} /></div>
-                <div className="mood">Frustrated <br></br><FontAwesomeIcon icon={faAngry} /></div>
-            </Card.Body>
-        </Card>
+            <div className="emojiContainer">
+                <div className="emojis" onClick={() => onEmotionSelect('good')}>
+                    Good <br /> <FontAwesomeIcon icon={faSmile} />
+                </div>
+                <div className="emojis" onClick={() => onEmotionSelect('neutral')}>
+                    Neutral <br /> <FontAwesomeIcon icon={faMehBlank} />
+                </div>
+                <div className="emojis" onClick={() => onEmotionSelect('low')}>
+                    Low <br /> <FontAwesomeIcon icon={faSadTear} />
+                </div>
+                <div className="emojis" onClick={() => onEmotionSelect('frustrated')}>
+                    Frustrated <br /> <FontAwesomeIcon icon={faAngry} />
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default EmojiBar;

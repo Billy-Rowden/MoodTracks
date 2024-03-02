@@ -67,9 +67,4 @@ function Login() {
     );
 }
 
-// ToDO: render a button beneath the calendar to take the user to their journal page
-// hide the navbar on login page
-//calendar is fixed right now, needs to be amended so that it will scroll with the user
-
-
 export default Login;
