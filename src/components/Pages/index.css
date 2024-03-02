@@ -2,3 +2,30 @@
     color: black;
     text-align: center;
 }
+
+Form {
+    margin: 2em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-control {
+    background-color: transparent;
+}
+
+.loginButton {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+

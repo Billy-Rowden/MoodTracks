@@ -1,12 +1,17 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import JournalEntryForm from '../JournalEntry';
 
+
+import './index.css';
 
 function Journal() {
     return (
-        <Container>
-            <h1>Welcome to the Journal Page</h1>
-        </Container>
+        <>
+        <div className="journal-container">
+            <h2>Journal</h2>
+            <JournalEntryForm className="journal-entry-form" />
+        </div>
+        </>
     );
 }
 

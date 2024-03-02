@@ -23,4 +23,6 @@ function JournalNavbar() {
     );
 }
 
+//navbar needs fixing so that it goes into a hamburger menu
+
 export default JournalNavbar;

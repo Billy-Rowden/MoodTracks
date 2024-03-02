@@ -1,0 +1,16 @@
+.emojiContainer {
+    display: flex;
+}
+
+.emojis {
+    justify-content: space-evenly;
+}
+
+.mood {
+transition: transform 0.3s ease;
+}
+
+.mood:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}

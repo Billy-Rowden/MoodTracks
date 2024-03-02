@@ -6,9 +6,20 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    font-size: 0.75em;
 }
 
 .footerButton {
     background-color: #fffeef;
     border: 1px solid black;
+    height: 30%;
+    width: 15%;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
