@@ -13,10 +13,10 @@ function JournalNavbar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Link className="navLink" href="/">login</Nav.Link>
-                    <Nav.Link className="navLink" href="/journal">journal</Nav.Link>
-                    <Nav.Link className="navLink" href="/contact">contact</Nav.Link>
-                    <Nav.Link className="navLink" href="/socials">socials</Nav.Link>
+                    <Nav.Link className="navLink" href="/">Login</Nav.Link>
+                    <Nav.Link className="navLink" href="/journal">Journal</Nav.Link>
+                    <Nav.Link className="navLink" href="/contact">Contact</Nav.Link>
+                    <Nav.Link className="navLink" href="/socials">Socials</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

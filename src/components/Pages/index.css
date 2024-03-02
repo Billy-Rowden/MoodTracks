@@ -1,37 +1,34 @@
 * {
-    color:var(--dark-blue);
-    text-align: center;
+  color: var(--dark-blue);
+  text-align: center;
 }
 
 Form {
-    margin: 2em;
+  margin: 2em;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
 }
 
 .login-container {
-    margin-top: 7vh;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+  margin-top: 7vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
-.form-label{
-    font-size: 20px;
-    color: var(--blue-grey);
+.form-label {
+  font-size: 20px;
+  color: var(--blue-grey);
 }
 
-
-.loginButton:hover{
-background-color: var(--dark-blue) !important;
+.loginButton:hover {
+  background-color: var(--dark-blue) !important;
 }
 .mainLogo {
-    margin-top: 5vh;
-    max-width: 100%;
+  margin-top: 5vh;
+  max-width: 100%;
 }
-
-

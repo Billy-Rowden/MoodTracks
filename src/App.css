@@ -1,10 +1,10 @@
-:root{
-  --orange: #E06523;
+:root {
+  --orange: #e06523;
   --grey-blue: #48566c;
   --nude: #f2e8e6;
   --dark-blue: #18206b;
   --light-blue: #e3e9ff;
-  --middle-blue:#5375fc;
+  --middle-blue: #5375fc;
 }
 
 #root {
@@ -15,5 +15,22 @@
   overflow: hidden;
 }
 
+/*navBar*/
+.navLink {
+  color: var(--dark-blue);
+  transition: transform 0.3s ease;
+}
+.navLink:hover {
+  color: var(--orange);
+  transform: scale(1.1);
+}
 
+.ml-auto {
+  margin-left: auto;
+  gap: 5vw;
+}
+.customNav {
+  padding: 0 4vw;
+}
 
+/*navBar*/
