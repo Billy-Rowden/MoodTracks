@@ -1,10 +1,15 @@
 .feelingContainer {
     width: 100%;
 }
-
 .emojiContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: var(--nude);
+    padding: 0 2vw;
 }
 
 .emojis-row {
@@ -14,7 +19,7 @@
 .emojis {
     text-align: center;
     transition: transform 0.3s ease;
-    padding: 3vw;
+    padding: 2vw;
 }
 
 .emojis:hover {

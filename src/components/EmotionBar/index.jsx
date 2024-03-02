@@ -11,16 +11,16 @@ const EmojiBar = ({ onEmotionSelect }) => {
             <div className="emojiContainer">
                 <div className="emojis-row">
                     <div className="emojis" onClick={() => onEmotionSelect('good')}>
-                        Good <br /> <FontAwesomeIcon icon={faSmile} />
+                        Good <br /> <FontAwesomeIcon icon={faSmile} size="2x"/>
                     </div>
                     <div className="emojis" onClick={() => onEmotionSelect('neutral')}>
-                        Neutral <br /> <FontAwesomeIcon icon={faMehBlank} />
+                        Neutral <br /> <FontAwesomeIcon icon={faMehBlank} size="2x" />
                     </div>
                     <div className="emojis" onClick={() => onEmotionSelect('low')}>
-                        Low <br /> <FontAwesomeIcon icon={faSadTear} />
+                        Low <br /> <FontAwesomeIcon icon={faSadTear} size="2x" />
                     </div>
                     <div className="emojis" onClick={() => onEmotionSelect('frustrated')}>
-                        Frustrated <br /> <FontAwesomeIcon icon={faAngry} />
+                        Frustrated <br /> <FontAwesomeIcon icon={faAngry} size="2x"/>
                     </div>
                 </div>
             </div>
