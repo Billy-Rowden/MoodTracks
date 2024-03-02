@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import mainLogo from '../../assets/images/mainLogo.png'; // Import the image file
 import './index.css';
 
 function JournalNavbar() {
     return (
         <Navbar expand="lg" className="customNav">
-            <Navbar.Brand id="navTitle" href="/">Our Logo</Navbar.Brand>
+            <Navbar.Brand id="navTitle" href="/">
+                <img src={mainLogo} alt="Main Logo" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">

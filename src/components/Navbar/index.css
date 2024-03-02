@@ -1,3 +1,8 @@
 .customNav {
     margin: 0.5em;
 }
+
+.customNav img {
+    width: 250px;
+
+}
