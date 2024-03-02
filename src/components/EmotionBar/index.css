@@ -1,0 +1,23 @@
+.feelingContainer {
+    width: 100%;
+}
+
+.emojiContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.emojis-row {
+    display: flex;
+}
+
+.emojis {
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 3vw;
+}
+
+.emojis:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}

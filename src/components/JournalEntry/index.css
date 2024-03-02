@@ -1,0 +1,29 @@
+.journalForm {
+    position: fixed;
+}
+
+.dateInput,
+.journalEntry {
+    width: 100%;
+    margin: 0.5em;
+    background-color: #fffeef !important;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+.rdp-month {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: fffeef;
+    border: 1px solid #ccc;
+}
+
+.rdp-month button {
+    background-color: #fffeef;
+}
+
+.submitButton {
+    background-color: transparent;
+}

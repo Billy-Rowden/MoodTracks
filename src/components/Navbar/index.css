@@ -1,7 +1,8 @@
 .customNav {
-    background-color: #fffeef;
+    margin: 0.5em;
 }
 
-.navLink {
-    margin: 2em;
+.customNav img {
+    width: 250px;
+
 }
