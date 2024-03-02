@@ -1,5 +1,5 @@
 * {
-    color: black;
+    color:var(--dark-blue);
     text-align: center;
 }
 
@@ -14,13 +14,15 @@ Form {
 }
 
 .login-container {
+    margin-top: 8vh;
     display: flex;
     justify-content: center;
     height: 100vh;
 }
 
-.form-control {
-    background-color: transparent;
+.form-label{
+    font-size: 20px;
+    color: var(--blue-grey);
 }
 
 .loginButton {
