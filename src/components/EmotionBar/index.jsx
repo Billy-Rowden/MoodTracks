@@ -5,6 +5,8 @@ import './index.css';
 
 const EmojiBar = ({ onEmotionSelect }) => {
     return (
+        <>
+        <h5>How are you feeling today?</h5>
         <div className="feelingContainer">
             <div className="emojiContainer">
                 <div className="emojis-row">
@@ -23,6 +25,7 @@ const EmojiBar = ({ onEmotionSelect }) => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
