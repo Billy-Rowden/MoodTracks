@@ -9,7 +9,7 @@ import './index.css';
 function Login() {
     const [firstName, setFirstName] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false); // State to track login status
+    const [loggedIn, setLoggedIn] = useState(false); 
     const location = useLocation();
 
     const handleFirstNameChange = (event) => {

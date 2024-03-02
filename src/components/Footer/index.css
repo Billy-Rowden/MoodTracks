@@ -1,9 +1,9 @@
 .footer {
-    position: fixed;
-    bottom: 0;
+    position: fixed !important;
+    bottom: 0 !important;
     width: 100%;
-    background-color: transparent;
-    border: none;
+    background-color: transparent !important;
+    border: none !important;
 }
 
 .footer-body {
