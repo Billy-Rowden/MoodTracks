@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import Calendar from '../Calendar';
 import JournalNavbar from '../Navbar';
+import mainLogo from '../../assets/images/mainLogo.png'
 import './index.css';
 
 function Login() {
@@ -38,6 +39,8 @@ function Login() {
     };
 
     return (
+        <>
+        <img src={mainLogo} alt="mainLogo" className="mainLogo"/>
         <Container className="login-container">
             <div className="loginPage">
                 <div className="login-form">
@@ -71,6 +74,7 @@ function Login() {
                 {loggedIn && selectedDate && <JournalNavbar />}
             </div>
         </Container>
+        </>
     );
 }
 

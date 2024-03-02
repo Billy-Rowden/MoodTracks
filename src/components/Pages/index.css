@@ -29,4 +29,9 @@ Form {
     color: black !important;
 }
 
+.mainLogo {
+    margin-top: 5vh;
+    max-width: 100%;
+}
+
 
