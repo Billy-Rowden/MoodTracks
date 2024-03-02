@@ -4,4 +4,19 @@
 .customNav img {
   width: 250px;
 }
+.navLink {
+  color: var(--dark-blue) !important;
+  transition: transform 0.3s ease !important;
+}
+.navLink:hover {
+  color: var(--orange) !important;
+  transform: scale(1.1);
+}
 
+.ml-auto {
+  margin-left: auto;
+  gap: 5vw;
+}
+.customNav {
+  padding: 0 4vw !important;
+}

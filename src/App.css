@@ -15,22 +15,6 @@
   overflow: hidden;
 }
 
-/*navBar*/
-.navLink {
-  color: var(--dark-blue);
-  transition: transform 0.3s ease;
-}
-.navLink:hover {
-  color: var(--orange);
-  transform: scale(1.1);
-}
 
-.ml-auto {
-  margin-left: auto;
-  gap: 5vw;
-}
-.customNav {
-  padding: 0 4vw;
-}
 
-/*navBar*/
+

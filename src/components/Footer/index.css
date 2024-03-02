@@ -1,23 +1,30 @@
 .footer {
-    position: fixed !important;
-    bottom: 0 !important;
-    width: 100%;
-    background-color: transparent !important;
-    border: none !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100%;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .footer-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-text {
-    margin: 0;
+  margin: 0;
 }
 
 .footer-button {
-    background-color: transparent !important;
-    border: 1px solid black !important;
-    color: black !important;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 5px;
+  background-color: var(--grey-blue)!important;
+  color: var(--light-blue);
+  margin-top: 1.5em;
+  border: none;
 }
+.footer-button:hover{
+    background-color: var(--dark-blue)!important;
+    }
