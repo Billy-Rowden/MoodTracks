@@ -1,10 +1,20 @@
+:root {
+  --orange: #e06523;
+  --grey-blue: #48566c;
+  --nude: #f2e8e6;
+  --dark-blue: #18206b;
+  --light-blue: #e3e9ff;
+  --middle-blue: #5375fc;
+}
+
 #root {
   max-width: 100vw;
   min-height: 100vh;
-  background-color: #fffeef;
+  background-color: var(--light-blue);
   text-align: center;
   overflow: hidden;
 }
+
 
 
 
