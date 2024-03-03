@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "profile-picture": "https://avatars.githubusercontent.com/u/149689619?v=4",
+        "name": "Billy Rowden",
+        "introduction": "I'm an aspiring developer based in the South West of the UK, ready to continue my journey in the technology industry.",
+        "github": "https://github.com/Billy-Rowden"
+    },
+    {
+        "id": 2,
+        "profile-picture": "https://avatars.githubusercontent.com/u/150028191?v=4",
+        "name": "Gemma Wood",
+        "introduction": "Passionate graphic designer with a keen eye for aesthetics and a drive for continuous learning in front-end development.",
+        "github": "https://github.com/Gemma-Wood"
+    },
+    {
+        "id": 3,
+        "profile-picture": "https://avatars.githubusercontent.com/u/136857768?v=4",
+        "name": "Lauren Eaton",
+        "introduction": "Japanese language aficionado turned aspiring web wizard,armed with a thirst for new challenges.",
+        "github": "https://github.com/eatontechnology"
+    },
+    {
+        "id": 4,
+        "profile-picture": "https://avatars.githubusercontent.com/u/121907256?v=4",
+        "name": "Nicole Santamaría",
+        "introduction": "Junior Front-end developer based in London. I fuse my love for coding, art, and design to craft innovative digital experiences.",
+        "github": "https://github.com/NicoleSanG"
+    },
+    {
+        "id": 5,
+        "profile-picture": "https://avatars.githubusercontent.com/u/150153733?v=4",
+        "name": "Mohammed Rahman",
+        "introduction": "I am an aspiring software developer with experience using HTML, CSS & JavaScript. My aims are to learn React to possess a greater ability for Front End Work.",
+        "github": "https://github.com/mrahman676"
+    }
+]
