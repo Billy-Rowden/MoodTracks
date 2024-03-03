@@ -8,9 +8,10 @@
 }
 
 .journal-text-entry {
-    width: 100%;
+    margin-top: 3vw;
+    width: 80%;
     padding: 10px;
-    border: 2px solid;
+    border: 2px solid var(--dark-blue);
     border-radius: 30px;
     background-color: var(--nude);
 }
