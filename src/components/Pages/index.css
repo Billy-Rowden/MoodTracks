@@ -32,3 +32,8 @@ Form {
   margin-top: 5vh;
   max-width: 100%;
 }
+
+.profile-picture {
+  width: 200px;
+  border-radius: 50%;
+}

@@ -2,3 +2,7 @@
     background: black !important;
     border: black
 } 
+
+.rdp-month {
+    position: absolute !important;
+}
