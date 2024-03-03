@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import JournalEntryForm from '../JournalEntry';
 import EmojiBar from '../EmotionBar';
-import SpotifyPlayer from '../SpotifyPlayer/SpotifyPlayer';
 import AuthOptions from '../SpotifyPlayer/Auth';
 import './index.css';
 
@@ -60,7 +59,6 @@ function Journal() {
                 <h2>Daily Affirmation API here</h2>
                 <EmojiBar onEmotionSelect={handleEmotionSelect} />
                 <JournalEntryForm selectedEmotion={selectedEmotion} className="journal-entry-form" />
-                {accessToken && playlistData && <SpotifyPlayer accessToken={accessToken} playlistData={playlistData} />}
             </div>
         </>
     );
