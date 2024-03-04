@@ -33,13 +33,51 @@ Form {
   max-width: 100%;
 }
 
+/* contact*/
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vw;
+
+}
 .profile-picture {
   width: 10em !important;
   border-radius: 50%;
 }
 
 .profile-card {
-  margin-top: 3em;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.profile-name{
+  font-size: 18px;
+  width: 50vw;
+  text-align: center;
+}
+
+.link{
+  text-decoration: none;
+  color: var(--orange);
+  transition: transform 0.3s ease;
+}
+.link:hover{
+  text-decoration: none;
+  color: var(--blue-grey);
+ 
+}
+/* contact*/
+
+/*socials*/
+p{
+  font-size: 18px;
+}
+.socialMedia, .contacts{
+  display: flex;
+  flex-direction: column;
 }
 
 
+/*socials*/
