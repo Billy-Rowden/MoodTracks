@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
 import './index.css';
@@ -29,6 +30,8 @@ function JournalEntryForm({ selectedEmotion }) {
                     
                 </textarea>
                 </div>
+                <Button variant="primary">Save Entry</Button>
+                <Button variant="secondary">Clear Entry</Button>
             </div>
         </Container>
     );
