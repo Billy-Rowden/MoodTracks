@@ -21,7 +21,7 @@ function Socials() {
                     <FontAwesomeIcon icon={faXTwitter}  size="3x"/>
                 </a>
             </Container>
-            <p>Got Feedback? Let us know!</p>
+            <p className='feedback'>Got Feedback? Let us know!</p>
             <Container className="contacts">
                     <a href="https://wa.me/whatsappphonenumber" target="_blank" className='social-icon'>
                         <FontAwesomeIcon icon={faWhatsapp} size="3x" />
