@@ -14,5 +14,6 @@
     border: 2px solid var(--dark-blue);
     border-radius: 30px;
     background-color: var(--nude);
+    height: 30em;
 }
 

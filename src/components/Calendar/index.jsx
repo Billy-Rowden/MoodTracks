@@ -16,7 +16,7 @@ function Calendar({ onDateSelect }) {
 
     return (
         <div className="calendarContainer">
-            <DayPicker
+            <DayPicker className="mainCalendar"
                 mode="single"
                 selected={selected}
                 onSelect={handleDateChange}
