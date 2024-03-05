@@ -70,8 +70,13 @@ Form {
 .link:hover {
   text-decoration: none;
   color: var(--blue-grey);
+
 }
 /* contact*/
+.titleLogo {
+  width: 100vw;
+  padding: 2em;
+}
 
 /*socials*/
 .feedback {
