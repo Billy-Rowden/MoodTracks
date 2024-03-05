@@ -46,26 +46,25 @@ function Login() {
                 <div className="login-form">
                     <Form onSubmit={handleSubmit}>
                         <div className="input-group">
-                            <Form.Label>First name</Form.Label>
+                            <Form.Label>first name</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={firstName}
                                 onChange={handleFirstNameChange}
-                                style={{ width: '20em', height: '2.5em', borderRadius: '5px'}}
+                                style={{ width: '15em', height: '2em' }}
                             />
                         </div>
                         <div className="input-group">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>password</Form.Label>
                             <Form.Control
                                 type="password"
                                 value={password}
                                 onChange={handlePasswordChange}
-                                style={{ width: '20em', height: '2.5em', borderRadius: '5px'}}
+                                style={{ width: '15em', height: '2em' }}
                             />
                         </div>
-                        <Button variant="" type="submit" className="loginButton"
-                        style={{ width: '10em', height: '2.5em', borderRadius: '5px', backgroundColor: '#48566c', color:'#e3e9ff', marginTop:'1.5em'}}>
-                            Login
+                        <Button variant="primary" type="submit" className="loginButton">
+                            login
                         </Button>
                     </Form>
                 </div>
