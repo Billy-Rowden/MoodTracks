@@ -15,5 +15,23 @@
     background-color: var(--nude);
     height: 30em;
 }
+.entryButtons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+.save-btn{
+    background-color: var(--orange) !important;
+    color: var(--nude) !important;
+}
+.save-btn:hover, .clear-btn:hover {
+    background-color: var(--grey-blue) !important;
+}
 
-  
+.clear-btn{
+    background-color: var(--dark-blue) !important;
+    color: var(--nude) !important;
+}

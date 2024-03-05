@@ -75,6 +75,10 @@ Form {
   font-size: 18px;
   color: var(--middle-blue);
 }
+.socials-container{
+  padding-top: 6vw;
+}
+
 .socialMedia, .contacts{
   display: flex;
   flex-direction: row;

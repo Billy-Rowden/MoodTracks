@@ -30,8 +30,10 @@ function JournalEntryForm({ selectedEmotion }) {
                     
                 </textarea>
                 </div>
-                <Button variant="primary">Save Entry</Button>
-                <Button variant="secondary">Clear Entry</Button>
+                <div className='entryButtons-container'>
+                <Button variant="" className='save-btn'>Save Entry</Button>
+                <Button variant="" className='clear-btn'>Clear Entry</Button>
+                </div>
             </div>
         </Container>
     );
