@@ -8,7 +8,7 @@ import MTLogoVar5 from '../../assets/images/MTLogoVar5.png'
 function Socials() {
     return (
         <>
-        <img src={MTLogoVar5} />
+        <img className="titleLogo" src={MTLogoVar5} />
             <h1>Social Media</h1>
             <Container className="socialMedia">
                 <a href="https://instagram.com" target="_blank" className='social-icon'>
