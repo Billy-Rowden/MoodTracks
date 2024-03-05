@@ -43,6 +43,9 @@ function Calendar({ onDateSelect }) {
                     selected: 'my-selected'
                 }}
             />
+
+            <button onClick={handleGoToJournal} className='calendar-btn'>Go to Journal</button>
+
         </div>
     );
 }

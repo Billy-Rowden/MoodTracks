@@ -33,14 +33,18 @@ Form {
   max-width: 100%;
 }
 
+/*journal*/
+.journal-container {
+  margin-top: 3vw;
+}
+/*journal*/
 /* contact*/
-.contact-container{
+.contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3vw;
-
+  margin: 3vw 0;
 }
 .profile-picture {
   width: 10em !important;
@@ -52,18 +56,18 @@ Form {
   margin-bottom: 2vw;
 }
 
-.profile-name{
+.profile-name {
   font-size: 18px;
   width: 50vw;
   text-align: center;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: var(--orange);
   transition: transform 0.3s ease;
 }
-.link:hover{
+.link:hover {
   text-decoration: none;
   color: var(--blue-grey);
 
@@ -75,23 +79,51 @@ Form {
 }
 
 /*socials*/
-.feedback{
+.feedback {
   font-size: 18px;
   color: var(--middle-blue);
 }
-.socialMedia, .contacts{
+.socials-container {
+  padding-top: 6vw;
+}
+
+.socialMedia,
+.contacts {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 4vw;
   justify-items: center;
-  margin: 4vw 0;
+  margin: 4vw 0 ;
 }
-.social-icon{
+.social-icon {
   transition: transform 0.3s ease;
 }
-.social-icon:hover{
+.social-icon:hover {
   transform: scale(1.3);
 }
-
 /*socials*/
+
+@media only screen and (max-width: 768px) {
+  /*login*/
+  .mainLogo, .mainLogo-social {
+    max-width: 80%;
+  }
+  /*login*/
+
+  /*contact*/
+  .contact-container {
+  padding-bottom: 10vw;
+}
+  /*socials*/
+.socials-container{
+  padding-top: 15vw;
+}
+.socialMedia,
+.contacts {
+  gap: 5vw;
+  margin: 8vw 0;
+}
+  /*socials*/
+ 
+}

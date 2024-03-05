@@ -12,12 +12,12 @@ function JournalFooter() {
     };
 
     return (
-        <Card className="footer">
-            <Card.Body className="footer-body">
-                <Card.Text className="footer-text">© MoodTracks, 2024</Card.Text>
-                <Button variant="primary" className="footer-button" onClick={scrollToTop}>Top</Button>
-            </Card.Body>
-        </Card>
+        <div className="footer">
+            <div className="footer-body">
+                <p className="footer-text">© MoodTracks, 2024</p>
+                <Button className="footer-button" onClick={scrollToTop}>Top</Button>
+            </div>
+        </div>
     );
 }
 
