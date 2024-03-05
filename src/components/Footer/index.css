@@ -5,6 +5,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+  margin-top: 3em;
 }
 
 .footer-body {
@@ -23,7 +24,7 @@
   border-radius: 5px;
   background-color: var(--orange) !important;
   color: var(--light-blue);
-  border: none;
+  border-color: var(--dark-blue) !important;
   margin-top: 1.5em;
 }
 

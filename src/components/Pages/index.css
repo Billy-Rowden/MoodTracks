@@ -17,7 +17,7 @@ Form {
   margin-top: 7vh;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 110vh;
 }
 
 .form-label {
@@ -27,17 +27,26 @@ Form {
 
 .loginButton {
   background-color: var(--orange) !important;
+  border-color: var(--dark-blue) !important;
 }
 
+/* calendar */
+.calendarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .gotoJournalButton {
   margin: 0x !important;
-  background-color: #ed6523 !important;
+  background-color: var(--orange) !important;
+  border-color: var(--dark-blue) !important;
 }
 
 .gotoJournalButton:hover, .loginButton:hover {
-  background-color: var(--grey-blue) !important
+  background-color: var(--dark-blue) !important;
 }
 
+/* calendar */
 .mainLogo {
   margin-top: 5vh;
   max-width: 100%;

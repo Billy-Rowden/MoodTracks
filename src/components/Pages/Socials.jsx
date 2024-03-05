@@ -7,6 +7,7 @@ import MTLogoVar5 from '../../assets/images/MTLogoVar5.png'
 
 function Socials() {
     return (
+        <>
         <div className='socials-container'>
         <img src={MTLogoVar5} className='mainLogo-social' />
             <h1>Social Media</h1>
@@ -35,6 +36,7 @@ function Socials() {
                     </a>
             </Container>
         </div>
+        </>
     );
 }
 
