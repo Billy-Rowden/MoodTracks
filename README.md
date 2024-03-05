@@ -6,32 +6,45 @@ Interactive Front-End Application that tracks your personal mood and accompanies
 
 ## Description
 
-Introducing Mood Tracks: your go-to for mood tracking and personalized playlists. 
+Introducing Mood Tracks: your go-to for mood tracking and personalised playlists.<br>
 Effortlessly journal your daily moods and experiences, gaining insights into your emotional patterns. Our cutting-edge algorithms curate custom playlists to match your unique states, ensuring the perfect soundtrack for your journey. Say goodbye to generic playlists and hello to Mood Tracks: your personal mood journal and playlist companion.
 
 ## Deployed Site
 
-Deployed: https://billy-rowden.github.io/Mood-Journal-Generator/
+Deployed: 
 
 ## Usage
 
 Track your moods in a daily journal, receive daily affirmations and a playlist tailored to your mood and emotional state.
 
+1. Clone Repository <br>
+<code>git clone https://github.com/Billy-Rowden/Mood-Journal-Generator</code>
+
+2. Navigate to Project Directory <br>
+<code>cd MoodTracks</code>
+
+3. Install Dependencies <br>
+<code>npm install</code>
+
+4. Run the Application <br>
+<code>npm start</code>
+
+5. Once the application has started, open your web browser and navigate to http://localhost:3000 to view the MoodTracks app as shown in the terminal.
 
 ## Project Screenshots
 
 
 ## Contributors
 
-### Lauren Eaton
+### Lauren Eaton: https://github.com/eatontechnology
 
-### Gemma Wood
+### Gemma Wood: https://github.com/Gemma-Wood
 
-### Nicole Santamaría
+### Nicole Santamaría: https://github.com/NicoleSanG
 
-### Billy Rowden
+### Billy Rowden: https://github.com/Billy-Rowden
 
-### Mohammed Rahman
+### Mohammed Rahman: https://github.com/mrahman676
 
 ## License
 
@@ -46,12 +59,7 @@ Licensed under MIT.
 ![badmath](https://img.shields.io/badge/JavaScript-green)
 ![badmath](https://img.shields.io/badge/React-blue)
 
+---
 
-# React + Vite
+© 2024 MoodTracks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
