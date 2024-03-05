@@ -8,6 +8,9 @@ const css = `
 .my-today {
     color: #ed6523
 }
+.my-selected {
+    background-color: #ed6523
+}
 `
 
 function Calendar({ onDateSelect }) {
@@ -17,13 +20,14 @@ function Calendar({ onDateSelect }) {
     const handleDateChange = (selectedDate) => {
         setSelected(selectedDate);
         // Pass the selected date to the parent component
-        onDateSelect(selectedDate);
+        // onDateSelect(selectedDate);
         // Console log the selected date
         console.log('Selected Date:', selectedDate);
     };
 
     const handleGoToJournal = () => {
-        navigate('/journal');
+        console.log('navigating to journal')
+        navigate('/Journal');
     }
 
     return (
@@ -39,7 +43,6 @@ function Calendar({ onDateSelect }) {
                     selected: 'my-selected'
                 }}
             />
-            <button onClick={handleGoToJournal}>Go to Journal</button>
         </div>
     );
 }
