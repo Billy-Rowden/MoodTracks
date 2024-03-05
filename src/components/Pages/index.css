@@ -25,9 +25,19 @@ Form {
   color: var(--blue-grey);
 }
 
-.loginButton:hover {
-  background-color: var(--dark-blue) !important;
+.loginButton {
+  background-color: var(--orange) !important;
 }
+
+.gotoJournalButton {
+  margin: 0x !important;
+  background-color: #ed6523 !important;
+}
+
+.gotoJournalButton:hover, .loginButton:hover {
+  background-color: var(--grey-blue) !important
+}
+
 .mainLogo {
   margin-top: 5vh;
   max-width: 100%;

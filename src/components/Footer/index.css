@@ -3,6 +3,7 @@
   background-color: transparent !important;
   border: none !important;
   padding: 1em;
+  margin-top: 3em;
 }
 
 .footer-body {
@@ -19,12 +20,12 @@
   width: 5em;
   height: 2.5em;
   border-radius: 5px;
-  background-color: var(--grey-blue) !important;
+  background-color: var(--orange) !important;
   color: var(--light-blue);
   border: none;
   margin-top: 1.5em;
 }
 
 .footer-button:hover {
-  background-color: var(--dark-blue) !important;
+  background-color: var(--grey-blue) !important;
 }

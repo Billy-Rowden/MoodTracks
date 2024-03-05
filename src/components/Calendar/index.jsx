@@ -13,9 +13,9 @@ const css = `
 }
 `
 
-function Calendar({ onDateSelect }) {
+function Calendar() {
     const [selected, setSelected] = useState(null);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleDateChange = (selectedDate) => {
         setSelected(selectedDate);
@@ -25,10 +25,10 @@ function Calendar({ onDateSelect }) {
         console.log('Selected Date:', selectedDate);
     };
 
-    const handleGoToJournal = () => {
-        console.log('navigating to journal')
-        navigate('/Journal');
-    }
+    // const handleGoToJournal = () => {
+    //     console.log('navigating to journal')
+    //     navigate('/Journal');
+    // }
 
     return (
         <div className="calendarContainer">
