@@ -20,7 +20,7 @@ function Socials() {
                     <FontAwesomeIcon icon={faXTwitter}  size="3x"/>
                 </a>
             </Container>
-            <img src={MTLogoVar5} />
+            <img src={MTLogoVar5} className='mainLogo-social'/>
             <p className='feedback'>Got Feedback? Let us know!</p>
             <Container className="contacts">
                     <a href="https://wa.me/whatsappphonenumber" target="_blank" className='social-icon'>
