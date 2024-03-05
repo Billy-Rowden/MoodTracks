@@ -4,16 +4,16 @@
 
 .emotion-icon {
     text-align: center;
-    margin-bottom: 10px;
+    padding-top: 2vw;
 }
 
 .journal-text-entry {
-    margin-top: 2em;
+    margin-top: 3vw;
     width: 100%;
     padding: 10px;
-    border: 2px solid;
     border-radius: 30px;
     background-color: var(--nude);
     height: 30em;
 }
 
+  

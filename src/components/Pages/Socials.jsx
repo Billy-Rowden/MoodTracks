@@ -10,32 +10,28 @@ function Socials() {
         <>
         <img src={MTLogoVar5} />
             <h1>Social Media</h1>
-            <Container class="socialMedia">
-            <Card>
-                <a href="https://instagram.com" target="_blank">
-                    <FontAwesomeIcon icon={faInstagramSquare} />
+            <Container className="socialMedia">
+                <a href="https://instagram.com" target="_blank" className='social-icon'>
+                    <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
                 </a>
-                <a href="https://tiktok.com" target="_blank">
-                    <FontAwesomeIcon icon={faTiktok} />
+                <a href="https://tiktok.com" target="_blank" className='social-icon'>
+                    <FontAwesomeIcon icon={faTiktok} size="3x" />
                 </a>
-                <a href="https://twitter.com" target="_blank">
-                    <FontAwesomeIcon icon={faXTwitter} />
+                <a href="https://twitter.com" target="_blank" className='social-icon'>
+                    <FontAwesomeIcon icon={faXTwitter}  size="3x"/>
                 </a>
-            </Card>
             </Container>
+            <p className='feedback'>Got Feedback? Let us know!</p>
             <Container className="contacts">
-                Got Feedback? Let us know!
-                <Card>
-                    <a href="https://wa.me/whatsappphonenumber" target="_blank">
-                        <FontAwesomeIcon icon={faWhatsapp} />
+                    <a href="https://wa.me/whatsappphonenumber" target="_blank" className='social-icon'>
+                        <FontAwesomeIcon icon={faWhatsapp} size="3x" />
                     </a>
-                    <a href="tel:+1234567890">
-                        <FontAwesomeIcon icon={faPhone} />
+                    <a href="tel:+1234567890" className='social-icon'>
+                        <FontAwesomeIcon icon={faPhone} size="3x" />
                     </a>
-                    <a href="mailto:contact@moodtracks.com">
-                        <FontAwesomeIcon icon={faEnvelope} />
+                    <a href="mailto:contact@moodtracks.com" className='social-icon'>
+                        <FontAwesomeIcon icon={faEnvelope} size="3x"/>
                     </a>
-                </Card>
             </Container>
         </>
     );
