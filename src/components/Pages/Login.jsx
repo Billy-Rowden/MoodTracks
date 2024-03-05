@@ -12,7 +12,7 @@ function Login() {
     const [firstName, setFirstName] = useState('');
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
-    const [selectedDate, setSelectedDate] = useState(null);
+    // const [selectedDate, setSelectedDate] = useState(null);
     const navigate = useNavigate(); // Initialize useNavigate hook
 
     const handleFirstNameChange = (event) => {
@@ -23,10 +23,10 @@ function Login() {
         setPassword(event.target.value);
     };
 
-    const handleDateSelect = (date) => {
-        setSelectedDate(date);
-        navigate('/journal', { state: { firstName } });
-    };
+    // const handleDateSelect = (date) => {
+    //     setSelectedDate(date);
+    //     navigate('/journal', { state: { firstName } });
+    // };
 
 
     const handleSubmit = (event) => {
@@ -36,6 +36,10 @@ function Login() {
             console.log('First Name:', firstName);
             console.log('Password:', password);
         }
+    };
+
+    const handleGoToJournal = () => {
+        navigate('/journal', { state: { firstName}});
     };
 
     return (
@@ -70,9 +74,9 @@ function Login() {
                     </Form>
                 </div>
                 <div className="calendar-container">
-                    {loggedIn && <Calendar className="calendar" onDateSelect={handleDateSelect} />}
+                    {loggedIn && <Calendar className="calendar" />}
+                    {loggedIn && <Button className="gotoJournalButton" onClick={handleGoToJournal}>Go to Journal</Button>}
                 </div>
-                {loggedIn && selectedDate && <JournalNavbar />}
             </div>
         </Container>
         </>
