@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiKey = "AIzaSyDCQiak0679rpJunPy7J-WSy8OcmPJkXnM";
+const apiKey = "AIzaSyD3HlZ7jSaEQK_Wd-wS4WeFtK0nXVr1bUI";
 
 const YoutubePlayer = ({ emotion }) => {
     const [playlist, setPlaylist] = useState(null);
@@ -9,7 +9,7 @@ const YoutubePlayer = ({ emotion }) => {
     useEffect(() => {
         const fetchVideoUrl = async () => {
             try {
-                let query = ''; // Initialize the query string
+                let query = ''; 
 
                 // Set the query based on the emotion
                 switch (emotion) {
@@ -41,7 +41,7 @@ const YoutubePlayer = ({ emotion }) => {
 
                 if (response.data.items.length > 0) {
                     const playlistId = response.data.items[0].id.playlistId;
-                    setPlaylist(`https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1`);
+                    setPlaylist(`https://www.youtube.com/embed/videoseries?list=${playlistId}`);
                 } else {
                     console.error('No playlist found for the emotion:', emotion);
                 }
