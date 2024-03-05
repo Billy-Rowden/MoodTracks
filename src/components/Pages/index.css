@@ -89,7 +89,7 @@ Form {
   justify-content: center;
   gap: 4vw;
   justify-items: center;
-  margin: 4vw 0;
+  margin: 4vw 0 ;
 }
 .social-icon {
   transition: transform 0.3s ease;
@@ -106,7 +106,19 @@ Form {
   }
   /*login*/
 
+  /*contact*/
+  .contact-container {
+  padding-bottom: 10vw;
+}
   /*socials*/
-
+.socials-container{
+  padding-top: 15vw;
+}
+.socialMedia,
+.contacts {
+  gap: 5vw;
+  margin: 8vw 0;
+}
   /*socials*/
+ 
 }
