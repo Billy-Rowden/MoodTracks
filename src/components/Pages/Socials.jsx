@@ -7,9 +7,10 @@ import MTLogoVar5 from '../../assets/images/MTLogoVar5.png'
 
 function Socials() {
     return (
-        <>
-        <img src={MTLogoVar5} />
+        <div className='socials-container'>
+        <img src={MTLogoVar5} className='mainLogo-social' />
             <h1>Social Media</h1>
+
             <Container className="socialMedia">
                 <a href="https://instagram.com" target="_blank" className='social-icon'>
                     <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
@@ -33,7 +34,7 @@ function Socials() {
                         <FontAwesomeIcon icon={faEnvelope} size="3x"/>
                     </a>
             </Container>
-        </>
+        </div>
     );
 }
 

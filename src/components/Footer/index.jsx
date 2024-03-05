@@ -1,7 +1,5 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import './index.css';
 
 function JournalFooter() {
@@ -13,22 +11,12 @@ function JournalFooter() {
     };
 
     return (
-        <>
-        <Nav className="justify-content-center footer">
-          <Nav.Item>
-            <Container className="footer-text">© MoodTracks, 2024</Container>
-          </Nav.Item>
-          <Nav.Item>
-            <Button variant="primary" className="footer-button" onClick={scrollToTop}>Top</Button>
-          </Nav.Item>
-        </Nav>
-      </>
-        // <Container className="footer">
-        //     <Container className="footer-body">
-        //         <Container className="footer-text">© MoodTracks, 2024</Container>
-        //         <Button variant="primary" className="footer-button" onClick={scrollToTop}>Top</Button>
-        //     </Container>
-        // </Container>
+        <div className="footer">
+            <div className="footer-body">
+                <p className="footer-text">© MoodTracks, 2024</p>
+                <Button className="footer-button" onClick={scrollToTop}>Top</Button>
+            </div>
+        </div>
     );
 }
 

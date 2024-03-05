@@ -1,9 +1,10 @@
 .footer {
-  width: 100vw;
-  background-color: transparent !important;
-  border: none !important;
   padding: 1em;
-  margin-top: 3em;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .footer-body {
@@ -27,5 +28,5 @@
 }
 
 .footer-button:hover {
-  background-color: var(--grey-blue) !important;
+  background-color: var(--dark-blue) !important;
 }

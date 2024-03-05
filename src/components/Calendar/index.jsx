@@ -25,11 +25,6 @@ function Calendar() {
         console.log('Selected Date:', selectedDate);
     };
 
-    // const handleGoToJournal = () => {
-    //     console.log('navigating to journal')
-    //     navigate('/Journal');
-    // }
-
     return (
         <div className="calendarContainer">
             <style>{css}</style>
@@ -43,6 +38,7 @@ function Calendar() {
                     selected: 'my-selected'
                 }}
             />
+
         </div>
     );
 }

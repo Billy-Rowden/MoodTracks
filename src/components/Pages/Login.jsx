@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import Calendar from '../Calendar';
-import JournalNavbar from '../Navbar';
 import mainLogo from '../../assets/images/mainLogo.png'
 import './index.css';
 

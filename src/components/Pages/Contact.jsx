@@ -7,7 +7,7 @@ import profilesData from './profiles.json';
 function Contact() {
     return (
         <Container className='contact-container'>
-            <h1>Contact Page</h1>
+            <h1>Contact us</h1>
             {profilesData.map((profile) => (
                 <div key={profile.id} className="profile-card">
                     <img src={profile['profile-picture']} alt={profile.name} className="profile-picture" />
