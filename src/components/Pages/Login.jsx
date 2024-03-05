@@ -39,7 +39,7 @@ function Login() {
     };
 
     const handleGoToJournal = () => {
-        navigate('/journal')
+        navigate('/journal', { state: { firstName}});
     };
 
     return (
