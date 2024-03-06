@@ -2,40 +2,33 @@
   color: var(--dark-blue);
   text-align: center;
 }
-
 Form {
   margin: 2em;
 }
-
 .input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
-
 .login-container {
   margin-top: 7vh;
   display: flex;
   justify-content: center;
-  height: 60vh;
+  margin-bottom: 200px;
 }
-
 .form-label {
   font-size: 20px;
   color: var(--blue-grey);
 }
-
 .loginButton {
   background-color: var(--orange) !important;
   border-color: var(--dark-blue) !important;
   margin-right: 0.5em;
 }
-
 .newUserBtn {
   background-color: var(--dark-blue) !important;
   border-color: var(--dark-blue) !important;
 }
-
 /* calendar */
 .calendarContainer {
   display: flex;
@@ -47,20 +40,18 @@ Form {
   background-color: var(--orange) !important;
   border-color: var(--dark-blue) !important;
 }
-
 .gotoJournalButton:hover, .loginButton:hover {
   background-color: var(--dark-blue) !important;
 }
-
 /* calendar */
 .mainLogo {
   margin-top: 5vh;
   max-width: 100%;
 }
-
 /*journal*/
 .journal-container {
   margin-top: 3vw;
+  margin-bottom: 200px;
 }
 /*journal*/
 /* contact*/
@@ -69,24 +60,22 @@ Form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3vw 0;
+  margin: 3vw;
+  margin-bottom: 100px !important;
 }
 .profile-picture {
   width: 10em !important;
   border-radius: 50%;
 }
-
 .profile-card {
   margin-top: 2vw;
   margin-bottom: 2vw;
 }
-
 .profile-name {
   font-size: 18px;
   width: 50vw;
   text-align: center;
 }
-
 .link {
   text-decoration: none;
   color: var(--orange);
@@ -95,14 +84,12 @@ Form {
 .link:hover {
   text-decoration: none;
   color: var(--blue-grey);
-
 }
 /* contact*/
 .titleLogo {
   width: 100vw;
   padding: 2em;
 }
-
 /*socials*/
 .feedback {
   font-size: 18px;
@@ -110,8 +97,8 @@ Form {
 }
 .socials-container {
   padding-top: 6vw;
+  margin-bottom: 150px;
 }
-
 .socialMedia,
 .contacts {
   display: flex;
@@ -128,14 +115,12 @@ Form {
   transform: scale(1.3);
 }
 /*socials*/
-
 @media only screen and (max-width: 768px) {
   /*login*/
   .mainLogo, .mainLogo-social {
     max-width: 80%;
   }
   /*login*/
-
   /*contact*/
   .contact-container {
   padding-bottom: 10vw;
@@ -150,7 +135,6 @@ Form {
   margin: 8vw 0;
 }
   /*socials*/
- 
 }
 
 /* bootstrap model for login /*

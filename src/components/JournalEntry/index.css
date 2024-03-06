@@ -1,12 +1,10 @@
 .journal-text-entry-container {
     width: 100%;
 }
-
 .emotion-icon {
     text-align: center;
     padding-top: 2vw;
 }
-
 .journal-text-entry {
     margin-top: 3vw;
     width: 100%;
@@ -30,7 +28,6 @@
 .save-btn:hover, .clear-btn:hover {
     background-color: var(--grey-blue) !important;
 }
-
 .clear-btn{
     background-color: var(--dark-blue) !important;
     color: var(--nude) !important;
