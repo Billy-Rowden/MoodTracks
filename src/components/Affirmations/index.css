@@ -1,0 +1,7 @@
+.affirmation-container{
+    border: solid 1px;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 15px;
+    background-color: var(--nude);
+}
