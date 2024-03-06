@@ -48,7 +48,8 @@ Form {
   border-color: var(--dark-blue) !important;
 }
 
-.gotoJournalButton:hover, .loginButton:hover {
+.gotoJournalButton:hover,
+.loginButton:hover {
   background-color: var(--dark-blue) !important;
 }
 
@@ -61,6 +62,14 @@ Form {
 /*journal*/
 .journal-container {
   margin-top: 3vw;
+}
+.date {
+  font-size: 20px;
+  margin-bottom: 1vw;
+}
+.hi {
+  color: var(--orange);
+  font-size: 34px;
 }
 /*journal*/
 /* contact*/
@@ -95,7 +104,6 @@ Form {
 .link:hover {
   text-decoration: none;
   color: var(--blue-grey);
-
 }
 /* contact*/
 .titleLogo {
@@ -119,7 +127,7 @@ Form {
   justify-content: center;
   gap: 4vw;
   justify-items: center;
-  margin: 4vw 0 ;
+  margin: 4vw 0;
 }
 .social-icon {
   transition: transform 0.3s ease;
@@ -131,26 +139,27 @@ Form {
 
 @media only screen and (max-width: 768px) {
   /*login*/
-  .mainLogo, .mainLogo-social {
+  .mainLogo,
+  .mainLogo-social {
     max-width: 80%;
   }
   /*login*/
 
   /*contact*/
   .contact-container {
-  padding-bottom: 10vw;
-}
+    padding-bottom: 10vw;
+  }
   /*socials*/
-.socials-container{
-  padding-top: 15vw;
-}
-.socialMedia,
-.contacts {
-  gap: 5vw;
-  margin: 8vw 0;
-}
+  .socials-container {
+    padding-top: 15vw;
+  }
+  .socialMedia,
+  .contacts {
+    gap: 5vw;
+    margin: 8vw 0;
+  }
   /*socials*/
- 
+
 }
 
 /* bootstrap model for login /*
@@ -186,6 +195,6 @@ Form {
 }
 
 .modal-footer .btn-secondary:hover {
-  background-color: #FFA500; /* Adjust to your desired lighter orange color */
-  border-color: #FFA500; /* Adjust to your desired lighter orange color */
+  background-color: #ffa500; /* Adjust to your desired lighter orange color */
+  border-color: #ffa500; /* Adjust to your desired lighter orange color */
 }

@@ -66,8 +66,8 @@ function Journal() {
             <div className="journal-container">
                 {selectedDate && (
                     <>
-                        <h2>Today is {selectedDate.toLocaleDateString()}</h2>
-                        <h3>Hi there, {firstName}</h3>
+                        <h2 className='date'>Today is {selectedDate.toLocaleDateString()}</h2>
+                        <h3 className='hi'>Hi there, {firstName}</h3>
                         <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
