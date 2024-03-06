@@ -72,8 +72,10 @@ function Login() {
                                     <Form.Label>Name</Form.Label>
                                     <Form.Control
                                         type="text"
+                                        placeholder="Enter your name"
                                         value={firstName}
                                         onChange={handleFirstNameChange}
+                                        title="Special characters and numbers are not allowed"
                                         style={{ width: '20em', height: '2.5em', borderRadius: '5px' }}
                                     />
                                 </div>
@@ -81,8 +83,10 @@ function Login() {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         type="password"
+                                        placeholder="Enter your password"
                                         value={password}
                                         onChange={handlePasswordChange}
+                                        title="Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number."
                                         style={{ width: '20em', height: '2.5em', borderRadius: '5px' }}
                                     />
                                 </div>
