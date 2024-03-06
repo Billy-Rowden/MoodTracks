@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import affirmations from './affirmations.json';
+import './index.css';
 
 const RandomAffirmation = () => {
     const [randomAffirmation, setRandomAffirmation] = useState(getRandomAffirmation());
