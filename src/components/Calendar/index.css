@@ -1,6 +1,6 @@
 .rdp-day_selected  {
     background: black !important;
-    border: black
+    border: black;
 } 
 .calendar-btn{
     background-color: var(--orange);
@@ -8,4 +8,8 @@
 }
 .calendar-btn:hover{
     background-color: var(--grey-blue);
+}
+
+.my-today {
+    color: black !important;
 }

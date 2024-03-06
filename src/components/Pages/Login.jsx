@@ -22,15 +22,11 @@ function Login() {
         setPassword(event.target.value);
     };
 
-    // const handleDateSelect = (date) => {
-    //     setSelectedDate(date);
-    //     navigate('/journal', { state: { firstName } });
-    // };
-
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (firstName.trim() !== '' && password.trim() !== '') {
+            localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
             console.log('First Name:', firstName);
             console.log('Password:', password);
