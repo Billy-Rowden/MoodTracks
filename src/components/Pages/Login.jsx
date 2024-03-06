@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom for navigation
 import Calendar from '../Calendar';
 import mainLogo from '../../assets/images/mainLogo.png';
 import './index.css';
@@ -51,6 +51,12 @@ function Login() {
         setLoggedIn(false);
     };
 
+    const handleLogoClick = () => {
+        // Clear input fields
+        setFirstName('');
+        setPassword('');
+    };
+
     const handleDateSelect = (date) => {
         console.log('Selected date:', date);
         setSelectedDate(date);
@@ -58,7 +64,10 @@ function Login() {
 
     return (
         <>
-            <img src={mainLogo} alt="mainLogo" className="mainLogo" />
+            {/* Wrap the main logo inside Link tag with the home page URL */}
+            <Link to="/" className="logo-link" onClick={handleLogoClick}>
+                <img src={mainLogo} alt="mainLogo" className="mainLogo" />
+            </Link>
             <Container className="login-container">
                 <div className="loginPage">
                     {/* Render login form only if not logged in */}
