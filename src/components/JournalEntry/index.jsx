@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
 import './index.css';
 
 function JournalEntryForm({ selectedEmotion }) {
+    const [journalEntry, setJournalEntry] = useState('');
+
     const getEmotionIcon = () => {
         switch (selectedEmotion) {
             case 'good':
@@ -21,18 +23,39 @@ function JournalEntryForm({ selectedEmotion }) {
         }
     };
 
+    useEffect(() => {
+        // Retrieve saved journal entry from localStorage
+        const savedJournalEntry = localStorage.getItem('journalEntry');
+        if (savedJournalEntry) {
+            setJournalEntry(savedJournalEntry);
+        }
+    }, []);
+
+    const handleSaveEntry = () => {
+        // Save journal entry to localStorage
+        localStorage.setItem('journalEntry', journalEntry);
+    };
+
+    const handleClearEntry = () => {
+        // Clear the journal entry textarea
+        setJournalEntry('');
+    };
+
     return (
         <Container>
             <div className="journal-text-entry-container">
                 <div className="emotion-icon">
                     {getEmotionIcon()}
-                <textarea className="journal-text-entry" placeholder="Write your journal entry here...">
-                    
-                </textarea>
+                    <textarea
+                        className="journal-text-entry"
+                        placeholder="Write your journal entry here..."
+                        value={journalEntry}
+                        onChange={(e) => setJournalEntry(e.target.value)}
+                    />
                 </div>
                 <div className='entryButtons-container'>
-                <Button variant="" className='save-btn'>Save Entry</Button>
-                <Button variant="" className='clear-btn'>Clear Entry</Button>
+                    <Button variant="" className='save-btn' onClick={handleSaveEntry}>Save Entry</Button>
+                    <Button variant="" className='clear-btn' onClick={handleClearEntry}>Clear Entry</Button>
                 </div>
             </div>
         </Container>

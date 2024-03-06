@@ -19,10 +19,8 @@ function Calendar() {
 
     const handleDateChange = (selectedDate) => {
         setSelected(selectedDate);
-        // Pass the selected date to the parent component
-        // onDateSelect(selectedDate);
-        // Console log the selected date
         console.log('Selected Date:', selectedDate);
+        localStorage.setItem('selectedDate', selectedDate);
     };
 
     return (

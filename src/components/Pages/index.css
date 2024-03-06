@@ -28,6 +28,12 @@ Form {
 .loginButton {
   background-color: var(--orange) !important;
   border-color: var(--dark-blue) !important;
+  margin-right: 0.5em;
+}
+
+.newUserBtn {
+  background-color: var(--dark-blue) !important;
+  border-color: var(--dark-blue) !important;
 }
 
 /* calendar */
