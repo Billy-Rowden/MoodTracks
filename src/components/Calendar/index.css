@@ -1,5 +1,5 @@
 .rdp-day_selected  {
-    background: black !important;
+    background: #e06523 !important;
     border: black;
 } 
 .calendar-btn{
@@ -13,4 +13,5 @@
 .my-today {
     color: var(--orange) !important;
 }
+
 
