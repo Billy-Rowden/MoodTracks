@@ -13,6 +13,14 @@ Effortlessly journal your daily moods and experiences, gaining insights into you
 
 Deployed: 
 
+## Table of Contents 
+
+* [Usage](#usage)
+* [Mockup](#mockup)
+* [Contributors](#contributors)
+* [Acknowledgements](#acknowledgements)
+* [License](#license)
+
 ## Usage
 
 Track your moods in a daily journal, receive daily affirmations and a playlist tailored to your mood and emotional state.
@@ -31,20 +39,26 @@ Track your moods in a daily journal, receive daily affirmations and a playlist t
 
 5. Once the application has started, open your web browser and navigate to http://localhost:3000 to view the MoodTracks app as shown in the terminal.
 
-## Project Screenshots
-
+## Mockup
+Saved gif to go here
 
 ## Contributors
 
-### Lauren Eaton: https://github.com/eatontechnology
+Lauren Eaton: https://github.com/eatontechnology<br>
 
-### Gemma Wood: https://github.com/Gemma-Wood
+Gemma Wood: https://github.com/Gemma-Wood<br>
 
-### Nicole Santamaría: https://github.com/NicoleSanG
+Nicole Santamaría: https://github.com/NicoleSanG<br>
 
-### Billy Rowden: https://github.com/Billy-Rowden
+Billy Rowden: https://github.com/Billy-Rowden<br>
 
-### Mohammed Rahman: https://github.com/mrahman676
+Mohammed Rahman: https://github.com/mrahman676<br>
+
+## Acknowledgements
+
+For the positive affirmations idea<br> 
+SergeyWebPro: https://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373<br>
+JSON APP API: https://www.jsonapi.co/public-api/Affirmations<br>
 
 ## License
 
