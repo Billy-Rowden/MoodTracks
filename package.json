@@ -1,5 +1,5 @@
 {
-  "name": "mood-journal-generator",
+  "name": "moodtracks",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -24,7 +24,6 @@
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2",
-    "react-spotify-web-playback": "^0.14.3",
     "react-youtube": "^10.1.0"
   },
   "devDependencies": {
