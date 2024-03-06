@@ -1,11 +1,11 @@
 .footer {
   padding: 1em;
-  position: relative;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: 3em;
+  margin-top: 10px;
 }
 
 .footer-body {
