@@ -67,8 +67,8 @@ function JournalEntryForm({ selectedEmotion, setSelectedEmotion }) {
                     />
                 </div>
                 <div className='entryButtons-container'>
-                    <Button variant="" className='save-btn' onClick={handleSaveEntry}>Save Entry</Button>
-                    <Button variant="" className='clear-btn' onClick={handleClearEntry}>Clear Entry</Button>
+                    <Button className='save-btn' onClick={handleSaveEntry}>Save Entry</Button>
+                    <Button className='clear-btn' onClick={handleClearEntry}>Clear Entry</Button>
                 </div>
             </div>
         </Container>
