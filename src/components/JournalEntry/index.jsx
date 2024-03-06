@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
 import './index.css';
 
-function JournalEntryForm({ selectedEmotion }) {
+function JournalEntryForm({ selectedEmotion, setSelectedEmotion }) {
     const [journalEntry, setJournalEntry] = useState('');
     const [currentDate, setCurrentDate] = useState('');
 
@@ -31,12 +31,12 @@ function JournalEntryForm({ selectedEmotion }) {
             const { journalEntry, selectedEmotion, date } = JSON.parse(savedData);
             setJournalEntry(journalEntry);
             if (date === currentDate) {
-            selectedEmotion(selectedEmotion);
+            setSelectedEmotion(selectedEmotion);
             } else {
-                selectedEmotion(null);;
+                setSelectedEmotion(null);;
             }
         }
-    }, [currentDate]);
+    }, [currentDate, selectedEmotion, setSelectedEmotion]);
 
     const handleSaveEntry = () => {
         // Save journal entry to localStorage

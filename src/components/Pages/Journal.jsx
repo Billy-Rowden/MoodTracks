@@ -5,6 +5,7 @@ import EmojiBar from '../EmotionBar';
 import YoutubePlayer from '../YouTubePlayer';
 import RandomAffirmation from '../Affirmations/RandomAffirmation';
 import './index.css';
+import { set } from 'date-fns';
 
 function Journal() {
     // const location = useLocation();
@@ -70,7 +71,7 @@ function Journal() {
                         <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
-                        <JournalEntryForm selectedEmotion={selectedEmotion} className="journal-entry-form" />
+                        <JournalEntryForm selectedEmotion={selectedEmotion} setSelectedEmotion={setSelectedEmotion} className="journal-entry-form" />
                     </>
                 )}
             </div>
