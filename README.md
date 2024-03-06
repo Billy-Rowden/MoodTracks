@@ -11,7 +11,7 @@ Effortlessly journal your daily moods and experiences, gaining insights into you
 
 ## Deployed Site
 
-Deployed: 
+Deployed: https://tiny-peony-773a5a.netlify.app 
 
 ## Table of Contents 
 
