@@ -63,7 +63,7 @@ function Login() {
                     <div className="login-form">
                         <Form onSubmit={handleSubmit}>
                             <div className="input-group">
-                                <Form.Label>First name</Form.Label>
+                                <Form.Label>Name</Form.Label>
                                 <Form.Control
                                     type="text"
                                     value={firstName}
