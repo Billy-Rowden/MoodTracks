@@ -1,7 +1,12 @@
-.affirmation-container{
-    border: solid 1px;
-    border-radius: 15px;
-    display: inline-block;
-    padding: 15px;
-    background-color: var(--nude);
+.affirmation-container {
+  border: solid 1px;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 15px;
+  background-color: var(--nude);
+}
+@media only screen and (max-width: 768px) {
+  .affirmation-container{
+margin: 3vw;
+  }
 }
