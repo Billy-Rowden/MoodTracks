@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import { Link, useNavigate } from 'react-router-dom';
 import Calendar from '../Calendar';
 import mainLogo from '../../assets/images/mainLogo.png';
@@ -12,6 +13,7 @@ function Login() {
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
+    const [showPasswordModal, setShowPasswordModal] = useState(false);
     const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
@@ -27,11 +29,15 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (firstName.trim() !== '' && password.trim() !== '') {
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // Regex for password criteria
+
+        if (firstName.trim() !== '' && passwordRegex.test(password)) {
             localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
             setFirstName('');
             setPassword('');
+        } else {
+            setShowPasswordModal(true); // Show the password modal if criteria not met
         }
     };
 
@@ -106,6 +112,20 @@ function Login() {
                     )}
                 </div>
             </Container>
+            {/* Password Criteria Modal */}
+            <Modal show={showPasswordModal} onHide={() => setShowPasswordModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Password Criteria</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowPasswordModal(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </>
     );
 }
