@@ -15,7 +15,10 @@ function Login() {
     const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
-        setFirstName(event.target.value);
+        const nameRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabets and spaces
+        if (nameRegex.test(event.target.value) || event.target.value === '') {
+            setFirstName(event.target.value);
+        }
     };
 
     const handlePasswordChange = (event) => {
