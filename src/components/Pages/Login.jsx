@@ -14,6 +14,7 @@ function Login() {
     const [loggedIn, setLoggedIn] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
     const [showPasswordModal, setShowPasswordModal] = useState(false);
+    const [showDateSelectionModal, setShowDateSelectionModal] = useState(false);
     const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
@@ -31,13 +32,13 @@ function Login() {
         event.preventDefault();
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // Regex for password criteria
 
-        if (firstName.trim() !== '' && passwordRegex.test(password)) {
+        if (!passwordRegex.test(password)) {
+            setShowPasswordModal(true); // Show the password modal if criteria not met
+        } else {
             localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
             setFirstName('');
             setPassword('');
-        } else {
-            setShowPasswordModal(true); // Show the password modal if criteria not met
         }
     };
 
@@ -45,7 +46,7 @@ function Login() {
         if (selectedDate) {
             navigate('/journal', { state: { firstName } });
         } else {
-            setShowPasswordModal(true); // Show the modal if date is not selected
+            setShowDateSelectionModal(true); // Show the modal if date is not selected
         }
     };
 
@@ -115,17 +116,27 @@ function Login() {
             {/* Password Criteria Modal */}
             <Modal show={showPasswordModal} onHide={() => setShowPasswordModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{selectedDate ? 'Password Criteria' : 'Date Selection'}</Modal.Title>
+                    <Modal.Title>Password Criteria</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    {selectedDate ? (
-                        <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
-                    ) : (
-                        <p>Please select a date before proceeding to your journal.</p>
-                    )}
+                    <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowPasswordModal(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            {/* Date Selection Modal */}
+            <Modal show={showDateSelectionModal} onHide={() => setShowDateSelectionModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Date Selection</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Please select a date before proceeding to your journal.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowDateSelectionModal(false)}>
                         Close
                     </Button>
                 </Modal.Footer>
