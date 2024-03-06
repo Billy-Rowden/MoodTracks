@@ -8,10 +8,8 @@ import MTLogoVar5 from '../../assets/images/MTLogoVar5.png'
 function Socials() {
     return (
         <>
-
-       <div className='socials-container'>
-
-        <img className="titleLogo" src={MTLogoVar5} />
+        <div className='socials-container'>
+        <img src={MTLogoVar5} className='mainLogo-social' />
             <h1>Social Media</h1>
 
             <Container className="socialMedia">
@@ -25,7 +23,6 @@ function Socials() {
                     <FontAwesomeIcon icon={faXTwitter}  size="3x"/>
                 </a>
             </Container>
-            <img src={MTLogoVar5} className='mainLogo-social'/>
             <p className='feedback'>Got Feedback? Let us know!</p>
             <Container className="contacts">
                     <a href="https://wa.me/whatsappphonenumber" target="_blank" className='social-icon'>
@@ -38,7 +35,7 @@ function Socials() {
                         <FontAwesomeIcon icon={faEnvelope} size="3x"/>
                     </a>
             </Container>
-            </div>
+        </div>
         </>
     );
 }
