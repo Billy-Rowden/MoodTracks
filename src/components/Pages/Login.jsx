@@ -45,6 +45,8 @@ function Login() {
         // Clear localStorage of saved user
         localStorage.removeItem('loggedInUser');
         localStorage.removeItem('selectedDate');
+        setFirstName('');
+        setPassword('');
         setLoggedIn(false);
     };
 
