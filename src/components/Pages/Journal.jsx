@@ -65,6 +65,7 @@ function Journal() {
                         <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
+                        {selectedEmotion && <SpotifyPlaylists emotion={selectedEmotion} />}
                         <JournalEntryForm selectedEmotion={selectedEmotion} className="journal-entry-form" />
                     </>
                 )}
