@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import JournalNavbar from './components/Navbar';
 import JournalFooter from './components/Footer';
 import { Login, Contact, Journal, Socials } from './components/Pages';
@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter>
       <NavbarVisibility />
       <Routes>
         <Route path="/" element={<Login />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/socials" element={<Socials />} />
       </Routes>
       <JournalFooter />
-    </Router>
+    </HashRouter>
   );
 }
 
