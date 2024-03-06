@@ -152,3 +152,40 @@ Form {
   /*socials*/
  
 }
+
+/* bootstrap model for login /*
+
+/* Add this CSS to your existing styles */
+
+/* Modal */
+.modal-content {
+  background-color: var(--dark-blue);
+  color: var(--orange);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  color: var(--orange);
+}
+
+.modal-body {
+  color: var(--orange);
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-footer .btn-secondary {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: var(--dark-blue);
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #FFA500; /* Adjust to your desired lighter orange color */
+  border-color: #FFA500; /* Adjust to your desired lighter orange color */
+}

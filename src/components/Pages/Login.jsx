@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom for navigation
+import Modal from 'react-bootstrap/Modal';
+import { Link, useNavigate } from 'react-router-dom';
 import Calendar from '../Calendar';
 import mainLogo from '../../assets/images/mainLogo.png';
 import './index.css';
@@ -12,10 +13,14 @@ function Login() {
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
-    const navigate = useNavigate(); // Initialize useNavigate hook
+    const [showPasswordModal, setShowPasswordModal] = useState(false);
+    const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
-        setFirstName(event.target.value);
+        const nameRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabets and spaces
+        if (nameRegex.test(event.target.value) || event.target.value === '') {
+            setFirstName(event.target.value);
+        }
     };
 
     const handlePasswordChange = (event) => {
@@ -24,17 +29,19 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (firstName.trim() !== '' && password.trim() !== '') {
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // Regex for password criteria
+
+        if (firstName.trim() !== '' && passwordRegex.test(password)) {
             localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
-            // Clear input fields after successful login
             setFirstName('');
             setPassword('');
+        } else {
+            setShowPasswordModal(true); // Show the password modal if criteria not met
         }
     };
 
     const handleGoToJournal = () => {
-        console.log('Selected date:', selectedDate);
         if (selectedDate) {
             navigate('/journal', { state: { firstName } });
         } else {
@@ -42,35 +49,21 @@ function Login() {
         }
     };
 
-    const handleNewUser = () => {
-        // Clear localStorage of saved user
-        localStorage.removeItem('loggedInUser');
-        localStorage.removeItem('selectedDate');
-        setFirstName('');
-        setPassword('');
-        setLoggedIn(false);
-    };
-
     const handleLogoClick = () => {
-        // Clear input fields
-        setFirstName('');
-        setPassword('');
+        handleNewUser(); // Perform the same function as clicking "New User" button
     };
 
     const handleDateSelect = (date) => {
-        console.log('Selected date:', date);
         setSelectedDate(date);
     };
 
     return (
         <>
-            {/* Wrap the main logo inside Link tag with the home page URL */}
             <Link to="/" className="logo-link" onClick={handleLogoClick}>
                 <img src={mainLogo} alt="mainLogo" className="mainLogo" />
             </Link>
             <Container className="login-container">
                 <div className="loginPage">
-                    {/* Render login form only if not logged in */}
                     {!loggedIn && (
                         <div className="login-form">
                             <Form onSubmit={handleSubmit}>
@@ -106,25 +99,9 @@ function Login() {
                                 >
                                     Login
                                 </Button>
-                                <Button
-                                    variant=""
-                                    type="button"
-                                    className="newUserBtn"
-                                    onClick={handleNewUser}
-                                    style={{
-                                        width: '9em',
-                                        height: '2.5em',
-                                        borderRadius: '5px',
-                                        color: '#e3e9ff',
-                                        marginTop: '1.5em',
-                                    }}
-                                >
-                                    New User
-                                </Button>
                             </Form>
                         </div>
                     )}
-                    {/* Render calendar and go to journal button only if logged in */}
                     {loggedIn && (
                         <div className="calendar-container">
                             <Calendar className="calendar" onSelect={handleDateSelect} />
@@ -135,6 +112,20 @@ function Login() {
                     )}
                 </div>
             </Container>
+            {/* Password Criteria Modal */}
+            <Modal show={showPasswordModal} onHide={() => setShowPasswordModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Password Criteria</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowPasswordModal(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </>
     );
 }
