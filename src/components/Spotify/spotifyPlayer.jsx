@@ -29,31 +29,51 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-    console.log('accessToken:', accessToken);
-    console.log('emotion:', emotion);
     if (accessToken && emotion) {
         // Define query based on emotion
         let query = '';
         switch (emotion) {
             case 'good':
-                query = 'chill instrumentals uplifting';
+                query = 'chill%20instrumentals%20uplifting';
                 break;
             case 'neutral':
-                query = 'neutral instrumentals';
+                query = 'neutral%20instrumentals';
                 break;
             case 'low':
-                query = 'sad lofi instrumental';
+                query = 'sad%20lofi%20instrumental';
                 break;
             case 'frustrated':
-                query = 'meditation instrumental';
+                query = 'meditation%20instrumental';
                 break;
             default:
                 console.error('Invalid emotion:', emotion);
                 return;
         }
-        // perform operation with query
+
+        // Fetch playlist based on query from Spotify API
+        axios.get('https://api.spotify.com/v1/search', {
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
+            params: {
+                q: query,
+                type: 'playlist',
+                limit: 1 // limit to 1 result
+            }
+        })
+        .then(response => {
+            if (response.data.playlists.items.length > 0) {
+                const playlistId = response.data.playlists.items[0].id;
+                setPlaylist(`https://open.spotify.com/embed/playlist/${playlistId}`);
+            } else {
+                setError('No playlist found for the emotion');
+            }
+        })
+        .catch(error => {
+            setError('Error fetching playlist');
+        });
     }
-});
+}, [accessToken, emotion]);
 
         
 
