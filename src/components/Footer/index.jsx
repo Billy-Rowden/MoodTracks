@@ -15,7 +15,7 @@ function JournalFooter() {
         <div className="footer">
             <div className="footer-body">
                 <p className="footer-text">© MoodTracks, 2024</p>
-                <Button className="footer-button" onClick={scrollToTop}>Top</Button>
+                <Button className="footer-button align-self-center" onClick={scrollToTop}>Top</Button>
             </div>
         </div>
         </footer>

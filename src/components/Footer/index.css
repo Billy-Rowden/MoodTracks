@@ -1,23 +1,21 @@
 .footer {
   padding: 1em;
-  /* position: fixed; */
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  background-color: #18206B;
 }
-
 .footer-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .footer-text {
   margin: 0;
+  color: white !important;
 }
-
 .footer-button {
   width: 5em;
   height: 2.5em;
@@ -25,9 +23,7 @@
   background-color: var(--orange) !important;
   color: var(--light-blue);
   border-color: var(--dark-blue) !important;
-  margin-top: 1.5em;
 }
-
 .footer-button:hover {
   background-color: var(--dark-blue) !important;
 }
