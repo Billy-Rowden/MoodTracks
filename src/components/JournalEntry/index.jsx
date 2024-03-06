@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
 import './index.css';
 
-function JournalEntryForm({ selectedEmotion }) {
+function JournalEntryForm({ selectedEmotion, setSelectedEmotion }) {
     const [journalEntry, setJournalEntry] = useState('');
+    const [currentDate, setCurrentDate] = useState('');
 
     const getEmotionIcon = () => {
         switch (selectedEmotion) {
@@ -24,21 +25,33 @@ function JournalEntryForm({ selectedEmotion }) {
     };
 
     useEffect(() => {
-        // Retrieve saved journal entry from localStorage
-        const savedJournalEntry = localStorage.getItem('journalEntry');
-        if (savedJournalEntry) {
-            setJournalEntry(savedJournalEntry);
+        // Retrieve saved journal entry and selected emotion from localStorage
+        const savedData = localStorage.getItem('journalEntry');
+        if (savedData) {
+            const { journalEntry, selectedEmotion, date } = JSON.parse(savedData);
+            setJournalEntry(journalEntry);
+            if (date === currentDate) {
+            setSelectedEmotion(selectedEmotion);
+            } else {
+                setSelectedEmotion(null);;
+            }
         }
-    }, []);
+    }, [currentDate, selectedEmotion, setSelectedEmotion]);
 
     const handleSaveEntry = () => {
         // Save journal entry to localStorage
-        localStorage.setItem('journalEntry', journalEntry);
+        const entryData = {
+            journalEntry: journalEntry,
+            selectedEmotion: selectedEmotion,
+            date: currentDate
+        };
+        localStorage.setItem('journalEntry', JSON.stringify(entryData));
     };
 
     const handleClearEntry = () => {
         // Clear the journal entry textarea
         setJournalEntry('');
+        localStorage.removeItem('journalEntry');
     };
 
     return (

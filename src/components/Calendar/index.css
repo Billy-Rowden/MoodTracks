@@ -11,5 +11,6 @@
 }
 
 .my-today {
-    color: black !important;
+    color: var(--orange) !important;
 }
+

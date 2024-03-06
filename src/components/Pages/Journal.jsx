@@ -5,9 +5,10 @@ import EmojiBar from '../EmotionBar';
 import YoutubePlayer from '../YouTubePlayer';
 import RandomAffirmation from '../Affirmations/RandomAffirmation';
 import './index.css';
+import { set } from 'date-fns';
 
 function Journal() {
-    const location = useLocation();
+    // const location = useLocation();
     const [firstName, setFirstName] = useState('');
     const [selectedEmotion, setSelectedEmotion] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
@@ -45,6 +46,8 @@ function Journal() {
                 // Set the selected emotion if found in localStorage
                 const { emotion } = JSON.parse(journalEntry);
                 setSelectedEmotion(emotion);
+            } else {
+                setSelectedEmotion(null);
             }
         }
     }, [selectedDate]);
@@ -52,8 +55,11 @@ function Journal() {
     const handleEmotionSelect = (emotion) => {
         setSelectedEmotion(emotion);
         // Save selected emotion to localStorage
+        if (selectedDate) {
         localStorage.setItem(selectedDate.toDateString(), JSON.stringify({ emotion }));
+        }
     };
+
 
     return (
         <>
@@ -65,7 +71,7 @@ function Journal() {
                         <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
-                        <JournalEntryForm selectedEmotion={selectedEmotion} className="journal-entry-form" />
+                        <JournalEntryForm selectedEmotion={selectedEmotion} setSelectedEmotion={setSelectedEmotion} className="journal-entry-form" />
                     </>
                 )}
             </div>

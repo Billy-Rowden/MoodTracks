@@ -26,7 +26,7 @@ Deployed:
 Track your moods in a daily journal, receive daily affirmations and a playlist tailored to your mood and emotional state.
 
 1. Clone Repository <br>
-<code>git clone https://github.com/Billy-Rowden/Mood-Journal-Generator</code>
+<code>git clone https://github.com/Billy-Rowden/MoodTracks</code>
 
 2. Navigate to Project Directory <br>
 <code>cd MoodTracks</code>

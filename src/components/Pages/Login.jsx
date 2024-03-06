@@ -11,6 +11,7 @@ function Login() {
     const [firstName, setFirstName] = useState('');
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
+    const [selectedDate, setSelectedDate]  = useState(null);
     const navigate = useNavigate(); // Initialize useNavigate hook
 
     const handleFirstNameChange = (event) => {
@@ -26,19 +27,33 @@ function Login() {
         if (firstName.trim() !== '' && password.trim() !== '') {
             localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
-            console.log('First Name:', firstName);
-            console.log('Password:', password);
+            // console.log('First Name:', firstName);
+            // console.log('Password:', password);
         }
     };
 
     const handleGoToJournal = () => {
-        navigate('/journal', { state: { firstName } });
+        console.log('Selected date:', selectedDate);
+        if (selectedDate) {
+            navigate('/journal', { state: { firstName } });
+        } else {
+            alert('Please select a date before proceeding to your journal')
+        }
     };
 
-    const handleNewUser = () => {
-        // Clear localStorage
-        localStorage.clear();
+    const handleNewUser = () => { 
+        // Clear localStorage of saved user
+        localStorage.removeItem('loggedInUser');
+        localStorage.removeItem('selectedDate');
+        setFirstName('');
+        setPassword('');
+        setLoggedIn(false);
     };
+
+    const handleDateSelect = (date) => {
+        console.log('Selected date:', date);
+        setSelectedDate(date);
+    }
 
     return (
         <>
@@ -76,7 +91,7 @@ function Login() {
                         </Form>
                     </div>
                     <div className="calendar-container">
-                        {loggedIn && <Calendar className="calendar" />}
+                        {loggedIn && <Calendar className="calendar" onSelect={handleDateSelect} />}
                         {loggedIn && <Button className="gotoJournalButton" onClick={handleGoToJournal}>Go to Journal</Button>}
                     </div>
                 </div>
