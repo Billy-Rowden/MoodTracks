@@ -55,6 +55,7 @@ function Journal() {
         localStorage.setItem(selectedDate.toDateString(), JSON.stringify({ emotion }));
     };
 
+
     return (
         <>
             <div className="journal-container">
