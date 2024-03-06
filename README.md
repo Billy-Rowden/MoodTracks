@@ -40,7 +40,8 @@ Track your moods in a daily journal, receive daily affirmations and a playlist t
 5. Once the application has started, open your web browser and navigate to http://localhost:3000 to view the MoodTracks app as shown in the terminal.
 
 ## Mockup
-Saved gif to go here
+<img src="https://github.com/Billy-Rowden/MoodTracks/blob/main/src/assets/images/MoodTracks%20Mockup.png?raw=true" style="width: 500px; height: 400px;"><br>
+<img src="https://github.com/Billy-Rowden/MoodTracks/blob/main/src/assets/gifs/Demo.gif?raw=true">
 
 ## Contributors
 
