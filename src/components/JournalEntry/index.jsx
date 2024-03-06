@@ -39,6 +39,7 @@ function JournalEntryForm({ selectedEmotion }) {
     const handleClearEntry = () => {
         // Clear the journal entry textarea
         setJournalEntry('');
+        localStorage.removeItem('journalEntry');
     };
 
     return (

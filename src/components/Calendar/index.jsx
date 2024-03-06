@@ -19,7 +19,6 @@ function Calendar({ onSelect }) {
                     today: 'my-today',
                 }}
             />
-
         </div>
     );
 }
