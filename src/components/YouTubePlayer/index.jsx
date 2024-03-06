@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiKey = "AIzaSyD3HlZ7jSaEQK_Wd-wS4WeFtK0nXVr1bUI";
+const apiKey = "AIzaSyCYJatlgFPkdB3V-60sjIx3Ct87NmbydKc";
+// AIzaSyD3HlZ7jSaEQK_Wd-wS4WeFtK0nXVr1bUI - first apiKey
+// AIzaSyCYJatlgFPkdB3V-60sjIx3Ct87NmbydKc - Current apiKey
 
 const YoutubePlayer = ({ emotion }) => {
     const [playlist, setPlaylist] = useState(null);

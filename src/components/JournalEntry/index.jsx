@@ -7,6 +7,7 @@ import './index.css';
 
 function JournalEntryForm({ selectedEmotion }) {
     const [journalEntry, setJournalEntry] = useState('');
+    const [currentDate, setCurrentDate] = useState('');
 
     const getEmotionIcon = () => {
         switch (selectedEmotion) {
@@ -27,17 +28,22 @@ function JournalEntryForm({ selectedEmotion }) {
         // Retrieve saved journal entry and selected emotion from localStorage
         const savedData = localStorage.getItem('journalEntry');
         if (savedData) {
-            const { journalEntry, selectedEmotion } = JSON.parse(savedData);
+            const { journalEntry, selectedEmotion, date } = JSON.parse(savedData);
             setJournalEntry(journalEntry);
+            if (date === currentDate) {
             selectedEmotion(selectedEmotion);
+            } else {
+                selectedEmotion(null);;
+            }
         }
-    }, []);
+    }, [currentDate]);
 
     const handleSaveEntry = () => {
         // Save journal entry to localStorage
         const entryData = {
             journalEntry: journalEntry,
-            selectedEmotion: selectedEmotion
+            selectedEmotion: selectedEmotion,
+            date: currentDate
         };
         localStorage.setItem('journalEntry', JSON.stringify(entryData));
     };

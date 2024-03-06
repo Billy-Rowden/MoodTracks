@@ -7,7 +7,7 @@ import RandomAffirmation from '../Affirmations/RandomAffirmation';
 import './index.css';
 
 function Journal() {
-    const location = useLocation();
+    // const location = useLocation();
     const [firstName, setFirstName] = useState('');
     const [selectedEmotion, setSelectedEmotion] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
@@ -45,6 +45,8 @@ function Journal() {
                 // Set the selected emotion if found in localStorage
                 const { emotion } = JSON.parse(journalEntry);
                 setSelectedEmotion(emotion);
+            } else {
+                setSelectedEmotion(null);
             }
         }
     }, [selectedDate]);
@@ -52,7 +54,9 @@ function Journal() {
     const handleEmotionSelect = (emotion) => {
         setSelectedEmotion(emotion);
         // Save selected emotion to localStorage
+        if (selectedDate) {
         localStorage.setItem(selectedDate.toDateString(), JSON.stringify({ emotion }));
+        }
     };
 
 
