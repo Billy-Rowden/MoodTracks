@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom for navigation
+import { Link, useNavigate } from 'react-router-dom';
 import Calendar from '../Calendar';
 import mainLogo from '../../assets/images/mainLogo.png';
 import './index.css';
@@ -12,7 +12,7 @@ function Login() {
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
-    const navigate = useNavigate(); // Initialize useNavigate hook
+    const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
         setFirstName(event.target.value);
@@ -27,14 +27,12 @@ function Login() {
         if (firstName.trim() !== '' && password.trim() !== '') {
             localStorage.setItem('loggedInUser', JSON.stringify({ firstName, password }));
             setLoggedIn(true);
-            // Clear input fields after successful login
             setFirstName('');
             setPassword('');
         }
     };
 
     const handleGoToJournal = () => {
-        console.log('Selected date:', selectedDate);
         if (selectedDate) {
             navigate('/journal', { state: { firstName } });
         } else {
@@ -42,35 +40,21 @@ function Login() {
         }
     };
 
-    const handleNewUser = () => {
-        // Clear localStorage of saved user
-        localStorage.removeItem('loggedInUser');
-        localStorage.removeItem('selectedDate');
-        setFirstName('');
-        setPassword('');
-        setLoggedIn(false);
-    };
-
     const handleLogoClick = () => {
-        // Clear input fields
-        setFirstName('');
-        setPassword('');
+        handleNewUser(); // Perform the same function as clicking "New User" button
     };
 
     const handleDateSelect = (date) => {
-        console.log('Selected date:', date);
         setSelectedDate(date);
     };
 
     return (
         <>
-            {/* Wrap the main logo inside Link tag with the home page URL */}
             <Link to="/" className="logo-link" onClick={handleLogoClick}>
                 <img src={mainLogo} alt="mainLogo" className="mainLogo" />
             </Link>
             <Container className="login-container">
                 <div className="loginPage">
-                    {/* Render login form only if not logged in */}
                     {!loggedIn && (
                         <div className="login-form">
                             <Form onSubmit={handleSubmit}>
@@ -106,25 +90,9 @@ function Login() {
                                 >
                                     Login
                                 </Button>
-                                <Button
-                                    variant=""
-                                    type="button"
-                                    className="newUserBtn"
-                                    onClick={handleNewUser}
-                                    style={{
-                                        width: '9em',
-                                        height: '2.5em',
-                                        borderRadius: '5px',
-                                        color: '#e3e9ff',
-                                        marginTop: '1.5em',
-                                    }}
-                                >
-                                    New User
-                                </Button>
                             </Form>
                         </div>
                     )}
-                    {/* Render calendar and go to journal button only if logged in */}
                     {loggedIn && (
                         <div className="calendar-container">
                             <Calendar className="calendar" onSelect={handleDateSelect} />
