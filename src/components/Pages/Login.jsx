@@ -45,7 +45,7 @@ function Login() {
         if (selectedDate) {
             navigate('/journal', { state: { firstName } });
         } else {
-            alert('Please select a date before proceeding to your journal');
+            setShowPasswordModal(true); // Show the modal if date is not selected
         }
     };
 
@@ -115,10 +115,14 @@ function Login() {
             {/* Password Criteria Modal */}
             <Modal show={showPasswordModal} onHide={() => setShowPasswordModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Password Criteria</Modal.Title>
+                    <Modal.Title>{selectedDate ? 'Password Criteria' : 'Date Selection'}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
+                    {selectedDate ? (
+                        <p>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.</p>
+                    ) : (
+                        <p>Please select a date before proceeding to your journal.</p>
+                    )}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowPasswordModal(false)}>
