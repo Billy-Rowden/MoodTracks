@@ -24,16 +24,22 @@ function JournalEntryForm({ selectedEmotion }) {
     };
 
     useEffect(() => {
-        // Retrieve saved journal entry from localStorage
-        const savedJournalEntry = localStorage.getItem('journalEntry');
-        if (savedJournalEntry) {
-            setJournalEntry(savedJournalEntry);
+        // Retrieve saved journal entry and selected emotion from localStorage
+        const savedData = localStorage.getItem('journalEntry');
+        if (savedData) {
+            const { journalEntry, selectedEmotion } = JSON.parse(savedData);
+            setJournalEntry(journalEntry);
+            selectedEmotion(selectedEmotion);
         }
     }, []);
 
     const handleSaveEntry = () => {
         // Save journal entry to localStorage
-        localStorage.setItem('journalEntry', journalEntry);
+        const entryData = {
+            journalEntry: journalEntry,
+            selectedEmotion: selectedEmotion
+        };
+        localStorage.setItem('journalEntry', JSON.stringify(entryData));
     };
 
     const handleClearEntry = () => {
