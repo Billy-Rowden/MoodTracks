@@ -1,5 +1,5 @@
 .rdp-day_selected  {
-    background: #e06523 !important;
+    background: var(--orange) !important;
     border: black;
 } 
 .calendar-btn{
@@ -7,11 +7,15 @@
     color: var(--nude);
 }
 .calendar-btn:hover{
-    background-color: var(--grey-blue);
+    background-color: var(--orange);
 }
 
 .my-today {
     color: var(--orange) !important;
 }
 
+.DayPicker-Day--selected {
+    background-color: var(--orange); /* Change to your desired color */
+    color: #ffffff; /* Change to your desired text color */
+}
 
