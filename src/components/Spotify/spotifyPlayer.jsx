@@ -27,3 +27,33 @@ useEffect(() => {
         window.location = `https://accounts.spotify.com/authorize?client_id=${apiKey}&response_type=token&redirect_uri=${redirectUri}&scope=playlist-read-private`;
     }
 }, []);
+
+useEffect(() => {
+    console.log('accessToken:', accessToken);
+    console.log('emotion:', emotion);
+    if (accessToken && emotion) {
+        // Define query based on emotion
+        let query = '';
+        switch (emotion) {
+            case 'good':
+                query = 'chill instrumentals uplifting';
+                break;
+            case 'neutral':
+                query = 'neutral instrumentals';
+                break;
+            case 'low':
+                query = 'sad lofi instrumental';
+                break;
+            case 'frustrated':
+                query = 'meditation instrumental';
+                break;
+            default:
+                console.error('Invalid emotion:', emotion);
+                return;
+        }
+        // perform operation with query
+    }
+});
+
+        
+
