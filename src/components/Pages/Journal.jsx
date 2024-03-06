@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import JournalEntryForm from '../JournalEntry';
 import EmojiBar from '../EmotionBar';
 import YoutubePlayer from '../YouTubePlayer';
+import RandomAffirmation from '../Affirmations/RandomAffirmation';
 import './index.css';
 
 function Journal() {
@@ -59,9 +60,9 @@ function Journal() {
             <div className="journal-container">
                 {selectedDate && (
                     <>
-                        <h3>Today is {selectedDate.toLocaleDateString()}</h3>
-                        <h2>Hi there, {firstName}</h2>
-                        <h2>Daily Affirmation API here</h2>
+                        <h2>Today is {selectedDate.toLocaleDateString()}</h2>
+                        <h3>Hi there, {firstName}</h3>
+                        <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
                         <JournalEntryForm selectedEmotion={selectedEmotion} className="journal-entry-form" />
