@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import JournalEntryForm from '../JournalEntry';
 import EmojiBar from '../EmotionBar';
 import YoutubePlayer from '../YouTubePlayer';
 import RandomAffirmation from '../Affirmations/RandomAffirmation';
 import './index.css';
-import { set } from 'date-fns';
 
 function Journal() {
     // const location = useLocation();
@@ -23,11 +21,15 @@ function Journal() {
 
     useEffect(() => {
         // Retrieve selected emotion from localStorage
-        const storedEmotion = localStorage.getItem('selectedEmotion');
-        if (storedEmotion) {
-            setSelectedEmotion(storedEmotion);
+        if (selectedDate) {
+            const storedEmotion = localStorage.getItem(`selectedEmotion_${selectedDate.toDateString()}`);
+            if (storedEmotion) {
+                setSelectedEmotion(storedEmotion);
+            } else {
+                setSelectedEmotion(null);
+            }
         }
-    }, []);
+    }, [selectedDate]);
 
     useEffect(() => {
         // Retrieve firstName from localStorage if available
@@ -38,25 +40,18 @@ function Journal() {
         }
     }, []);
 
-    useEffect(() => {
-        // Retrieve journal entry from localStorage for the selected date
-        if (selectedDate) {
-            const journalEntry = localStorage.getItem(selectedDate.toDateString()); // Assuming you store journal entry with the date string as the key
-            if (journalEntry) {
-                // Set the selected emotion if found in localStorage
-                const { emotion } = JSON.parse(journalEntry);
-                setSelectedEmotion(emotion);
-            } else {
-                setSelectedEmotion(null);
-            }
-        }
-    }, [selectedDate]);
-
     const handleEmotionSelect = (emotion) => {
         setSelectedEmotion(emotion);
-        // Save selected emotion to localStorage
+        // Save selected emotion to localStorage for the selected date
         if (selectedDate) {
-        localStorage.setItem(selectedDate.toDateString(), JSON.stringify({ emotion }));
+            localStorage.setItem(`selectedEmotion_${selectedDate.toDateString()}`, emotion);
+        }
+    };
+
+    const handleSaveEntry = (journalEntry) => {
+        // Save journal entry to localStorage specific to the selected date
+        if (selectedDate) {
+            localStorage.setItem(`journalEntry_${selectedDate.toDateString()}`, journalEntry);
         }
     };
 
@@ -71,7 +66,12 @@ function Journal() {
                         <h5><RandomAffirmation /></h5>
                         <EmojiBar onEmotionSelect={handleEmotionSelect} />
                         {selectedEmotion && <YoutubePlayer emotion={selectedEmotion} />}
-                        <JournalEntryForm selectedEmotion={selectedEmotion} setSelectedEmotion={setSelectedEmotion} className="journal-entry-form" />
+                        <JournalEntryForm
+                            selectedEmotion={selectedEmotion}
+                            selectedDate={selectedDate}
+                            onSaveEntry={handleSaveEntry}
+                            className="journal-entry-form"
+                        />
                     </>
                 )}
             </div>
