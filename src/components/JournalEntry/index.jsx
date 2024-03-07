@@ -5,9 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faMehBlank, faSadTear, faAngry } from '@fortawesome/free-regular-svg-icons';
 import './index.css';
 
-function JournalEntryForm({ selectedEmotion, setSelectedEmotion }) {
+function JournalEntryForm({ selectedEmotion, selectedDate }) {
     const [journalEntry, setJournalEntry] = useState('');
-    const [currentDate, setCurrentDate] = useState('');
 
     const getEmotionIcon = () => {
         switch (selectedEmotion) {
@@ -25,33 +24,31 @@ function JournalEntryForm({ selectedEmotion, setSelectedEmotion }) {
     };
 
     useEffect(() => {
-        // Retrieve saved journal entry and selected emotion from localStorage
-        const savedData = localStorage.getItem('journalEntry');
+        // Retrieve saved journal entry from localStorage for the selected date
+        const savedData = localStorage.getItem(`journalEntry_${selectedDate}`);
         if (savedData) {
-            const { journalEntry, selectedEmotion, date } = JSON.parse(savedData);
+            const { journalEntry } = JSON.parse(savedData);
             setJournalEntry(journalEntry);
-            if (date === currentDate) {
-            setSelectedEmotion(selectedEmotion);
-            } else {
-                setSelectedEmotion(null);;
-            }
         }
-    }, [currentDate, selectedEmotion, setSelectedEmotion]);
+    }, [selectedDate]);
 
     const handleSaveEntry = () => {
-        // Save journal entry to localStorage
+        // Save journal entry to localStorage specific to the selected date
         const entryData = {
             journalEntry: journalEntry,
-            selectedEmotion: selectedEmotion,
-            date: currentDate
+            selectedEmotion: selectedEmotion
         };
-        localStorage.setItem('journalEntry', JSON.stringify(entryData));
+        localStorage.setItem(`journalEntry_${selectedDate}`, JSON.stringify(entryData));
+
+        if (selectedEmotion) {
+            localStorage.setItem(`selectedEmotion_${selectedDate}`, selectedEmotion);
+        }
     };
 
     const handleClearEntry = () => {
         // Clear the journal entry textarea
         setJournalEntry('');
-        localStorage.removeItem('journalEntry');
+        localStorage.removeItem(`journalEntry_${selectedDate}`);
     };
 
     return (
