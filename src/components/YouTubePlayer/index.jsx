@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiKey = "AIzaSyByCyGs0Cqugjaya_eP8tSTc9GFr4jTKwY";
+const apiKey = "AIzaSyDkKQsvEbVRwDslI5hIHkQLaD-WTN4SOVU";
 // AIzaSyD3HlZ7jSaEQK_Wd-wS4WeFtK0nXVr1bUI - first apiKey
 // AIzaSyCYJatlgFPkdB3V-60sjIx3Ct87NmbydKc - second apiKey
-// AIzaSyByCyGs0Cqugjaya_eP8tSTc9GFr4jTKwY - current
+// AIzaSyByCyGs0Cqugjaya_eP8tSTc9GFr4jTKwY - third apikey
+// AIzaSyDkKQsvEbVRwDslI5hIHkQLaD-WTN4SOVU - current
+// AIzaSyCjsu6TmNHj_njVj9mj6_0NoBut4Ks6B4k - free apikey to use
 
 const YoutubePlayer = ({ emotion }) => {
     const [playlist, setPlaylist] = useState(null);
