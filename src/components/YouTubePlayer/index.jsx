@@ -62,7 +62,7 @@ const YoutubePlayer = ({ emotion }) => {
         <div style={{ paddingTop: '20px' }}>
             {playlist && (
                 <iframe 
-                    width="560"
+                    width="90%"
                     height="315"
                     src={playlist}
                     frameBorder="0"
